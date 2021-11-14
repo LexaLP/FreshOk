@@ -3,6 +3,152 @@
 @import 'reset';
 @import 'global';
 
+.header {
+ background-color: $dark-800;
+
+ &__top {
+  padding: 15px 0;
+  color: $white;
+  font-size: 13px;
+  letter-spacing: 3%;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+ }
+
+ &__info {
+  display: flex;
+ }
+
+ &__info-item {
+  position: relative;
+  padding-left: 42px;
+ }
+
+
+ &__info-item:not(:last-child) {
+  margin-right: 48px;
+ }
+
+ &__info-item::before {
+  content: '';
+  position: absolute;
+  width: 32px;
+  height: 23px;
+  left: 0;
+  top: -8px;
+ }
+
+ &__info--adress::before {
+  background-image: url('../images/adress.svg');
+  background-repeat: no-repeat;
+ }
+
+ &__info--line::before {
+  background-image: url('../images/tel.svg');
+  background-repeat: no-repeat;
+  background-position: right;
+ }
+
+ &__menu-list {
+  display: flex;
+ }
+
+ &__menu-item:not(:last-child) {
+  margin-right: 24px;
+ }
+
+ &__content {
+  background-color: $green-900;
+  padding: 30px 0;
+ }
+
+ &__inner {
+  display: flex;
+  justify-content: space-between;
+ }
+
+ &__btn {
+  height: 50px;
+  max-width: 240px;
+  width: 100%;
+  border-radius: 6px;
+  border: none;
+  color: $green-900;
+  font-size: 14px;
+  @extend %opensans-600;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+ }
+
+ &__search {}
+}
+
+.form {
+ &__inner {
+  display: inline-flex;
+  background-color: $white;
+  border-radius: 6px;
+  align-items: center;
+  padding-left: 12px;
+  max-width: 576px;
+  width: 100%;
+ }
+
+ &__search {
+  max-width: 419px;
+  width: 100%;
+  height: 50px;
+  border: none;
+ }
+
+ &__img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  order: -1;
+ }
+
+ &__search:focus {
+  outline: none;
+ }
+
+ &__search:focus+&__img {}
+
+
+
+ &__search::placeholder {
+  color: $dark-800;
+  @extend %opensans-400;
+  font-size: 14px;
+ }
+
+ &__btn {
+  max-width: 156px;
+  width: 100%;
+  font-size: 14px;
+  height: 50px;
+  padding: 15px 52px;
+  border-right: 1px solid black;
+  border-radius: 0 6px 6px 0;
+  background-color: $dark-800;
+  color: $white;
+  @extend %opensans-600;
+ }
+
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

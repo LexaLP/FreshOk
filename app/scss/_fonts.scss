@@ -59,11 +59,21 @@
 }
 
 @font-face {
- font-family: 'Ruda', sans-serif;
+ font-family: 'Ruda';
  src: local('Ruda-SemiBold'),
   url('../fonts/Ruda-SemiBold.woff2') format('woff2'),
   url('../fonts/Ruda-SemiBold.woff') format('woff');
  font-weight: 600;
+ font-style: normal;
+ font-display: swap;
+}
+
+@font-face {
+ font-family: 'Ruda';
+ src: local('Ruda-Black'),
+  url('../fonts/Ruda-Black.woff2') format('woff2'),
+  url('../fonts/Ruda-Black.woff') format('woff');
+ font-weight: 900;
  font-style: normal;
  font-display: swap;
 }

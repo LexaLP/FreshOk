@@ -14,6 +14,8 @@ const del = require('del');
 const browserSync = require('browser-sync').create();
 
 
+
+
 function browsersync() {
  browserSync.init({
   server: {
@@ -55,6 +57,7 @@ function images() {
 function scripts() {
  return src([
    'node_modules/jquery/dist/jquery.js',
+   'node_modules/mixitup/dist/mixitup.min.js',
    'node_modules/slick-carousel/slick/slick.js',
    'app/js/main.js'
   ])
@@ -83,6 +86,7 @@ function watching() {
  watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
  watch(['app/**/*.html']).on('change', browserSync.reload);
 }
+
 
 exports.styles = styles;
 exports.scripts = scripts;

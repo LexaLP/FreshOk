@@ -1,0 +1,134 @@
+$green-900:#63A60F;
+$green-200:#E0EDCF;
+$green-100:#EFF6E7;
+$dark-900:#121212;
+$dark-800:#31352b;
+$dark-500:#505050;
+$red-900:#cf3e3b;
+$orange-900:#ff7a00;
+$yellow-900:#ffb800;
+$silver-600:#c1c1c1;
+$silver-100:#f6f6f6;
+$white:#FFFFFF;
+
+%opensans-300 {
+ font-family: 'Open Sans',
+  sans-serif;
+ font-weight: 300;
+}
+
+%opensans-400 {
+ font-family: 'Open Sans',
+  sans-serif;
+ font-weight: 400;
+}
+
+%opensans-600 {
+ font-family: 'Open Sans',
+  sans-serif;
+ font-weight: 600;
+}
+
+%opensans-700 {
+ font-family: 'Open Sans',
+  sans-serif;
+ font-weight: 700;
+}
+
+%ruda-400 {
+ font-family: 'Ruda',
+  sans-serif;
+ font-weight: 400;
+}
+
+%ruda-600 {
+ font-family: 'Ruda',
+  sans-serif;
+ font-weight: 600;
+}
+
+%ruda-700 {
+ font-family: 'Ruda',
+  sans-serif;
+ font-weight: 700;
+}
+
+%ruda-900 {
+ font-family: 'Ruda',
+  sans-serif;
+ font-weight: 900;
+}
+
+%btn {
+ padding: 12px 24px;
+ color: $white;
+ background-color: $green-900;
+ @extend %opensans-400;
+ font-size: 18px;
+ border-radius: 6px;
+ width: 182px;
+ opacity: 1;
+ display: block;
+ letter-spacing: 0.03em;
+}
+
+
+%new {
+ position: absolute;
+ content: 'Новинка';
+ background-color: $green-900;
+ color: $white;
+ padding: 3px 6px;
+ top: 8px;
+ left: 12px;
+ border-radius: 6px;
+ font-size: 10px;
+ line-height: 1;
+ @extend %opensans-700;
+ text-transform: uppercase;
+}
+
+%sale30 {
+ position: absolute;
+ content: '-30%';
+ background-color: $red-900;
+ color: $white;
+ padding: 3px 6px;
+ top: 8px;
+ left: 12px;
+ border-radius: 6px;
+ font-size: 10px;
+ line-height: 1;
+ @extend %opensans-700;
+ text-transform: uppercase;
+}
+
+%sale50 {
+ position: absolute;
+ content: '-50%';
+ background-color: $red-900;
+ color: $white;
+ padding: 3px 6px;
+ top: 32px;
+ left: 12px;
+ border-radius: 6px;
+ font-size: 10px;
+ line-height: 1;
+ @extend %opensans-700;
+ text-transform: uppercase;
+}
+
+%hit {
+ position: absolute;
+ content: 'Хит';
+ background-color: $orange-900;
+ color: $white;
+ padding: 3px 6px;
+ top: 8px;
+ left: 12px;
+ border-radius: 6px;
+ font-size: 10px;
+ line-height: 1;
+ @extend %opensans-700;
+ text-transform: uppercase;
+}

@@ -1,0 +1,71 @@
+.top-goods {
+ display: flex;
+ padding-top: 71px;
+
+ &__good {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  &:not(:last-child) {
+   margin-right: 30px;
+  }
+ }
+
+ &__good-content {
+  padding: 76px 70px 0 32px;
+  text-transform: uppercase;
+  color: $dark-500;
+  letter-spacing: 0;
+ }
+
+ &__good-text {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 100%;
+  margin-bottom: 18px;
+  letter-spacing: 0.1em;
+
+ }
+
+ &__good-title {
+  @extend %ruda-600;
+  font-size: 30px;
+  margin-bottom: 8px;
+
+ }
+
+ &__good-link {
+  font-weight: bold;
+  font-size: 14px;
+  padding-bottom: 2px;
+  border-bottom: 2px solid;
+  transition: all 0.5s;
+  &:hover {
+   opacity: 0.7;
+  }
+
+  &:focus {
+   box-shadow: 0px 0px 0px 3px $green-100;
+   border-radius: 3px;
+  }
+
+  &:active{
+   color: $orange-900;
+  }
+  
+ }
+
+ &__decor1 {
+  color: $white;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25);
+ }
+
+ &__decor2 {
+  color: $white;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
+  max-width: 356px;
+ }
+
+
+}

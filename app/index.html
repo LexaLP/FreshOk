@@ -6,7 +6,7 @@
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>ФрешОК | Главная страница</title>
- <link rel="icon" href="images/favicon/favicon.png" style="width: 32;height: 32;">
+ <link rel="icon" href="images/favicon/favicon.png">
  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -58,17 +58,17 @@
     <nav class="header__menu">
      <ul class="header__menu-list">
       <li class="header__menu-item">
-       <a class="header__menu-link" href="">
+       <a class="header__menu-link" href="#">
         Доставка
        </a>
       </li>
       <li class="header__menu-item">
-       <a class="header__menu-link" href="">
+       <a class="header__menu-link" href="#">
         О нас
        </a>
       </li>
       <li class="header__menu-item">
-       <a class="header__menu-link" href="">
+       <a class="header__menu-link" href="#">
         Новости
        </a>
       </li>
@@ -76,6 +76,7 @@
     </nav>
    </div>
   </div>
+
   <div class="header__content">
    <div class="container">
     <div class="header__inner">
@@ -95,15 +96,17 @@
         fill="#7CB238" />
       </svg>
      </button>
+
      <form class="header__search" action="">
       <div class="form__inner">
        <input class="form__search" type="search" placeholder="Найти в магазине ...">
        <img class="form__img" src="images/user-icons/search.svg" alt="поиск">
-       <a class="form__btn">
+       <a class="form__btn" href="#">
         Поиск
        </a>
       </div>
      </form>
+
      <div class="user-nav">
       <a class="user-nav__link user" href="#">
        <img class="user-nav__link-img" src="images/user-icons/user.svg" alt="иконка пользователя">
@@ -124,8 +127,10 @@
 
  <main class="main">
   <section class="top-slider">
-   <div class="top-slider__inner">
-    <div class="top-slider__item--1">
+
+   <ul class="top-slider__inner">
+
+    <li class="top-slider__item" style="background-image: url('images/slider_bg/bg1.jpg');">
      <div class="container top-slider__container">
       <div class="top-slider__content">
        <h1 class="top-slider__title">
@@ -137,13 +142,14 @@
        <p class="top-slider__text">
         Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!
        </p>
-       <a href="" class="top-slider__link stat__btn">
+       <a class="top-slider__link stat__btn" href="#">
         Купить сейчас
        </a>
       </div>
      </div>
-    </div>
-    <div class="top-slider__item--2">
+    </li>
+
+    <li class="top-slider__item" style="background-image: url('images/slider_bg/bg2.jpg');">
      <div class="container top-slider__container">
       <div class="top-slider__content">
        <h1 class="top-slider__title">
@@ -155,13 +161,14 @@
        <p class="top-slider__text">
         Только с 12 по 15 июля скидка на домашние помидорчики
        </p>
-       <a href="" class="top-slider__link stat__btn">
+       <a class="top-slider__link stat__btn" href="#">
         Купить сейчас
        </a>
       </div>
      </div>
-    </div>
-    <div class="top-slider__item--3">
+    </li>
+
+    <li class="top-slider__item" style="background-image: url('images/slider_bg/bg3.jpg');">
      <div class="container top-slider__container">
       <div class="top-slider__content content__item">
        <h1 class="top-slider__title">
@@ -171,16 +178,17 @@
          Распродажа зелени
         </span>
        </h1>
-       <a href="" class="top-slider__link stat__btn ">
+       <a class="top-slider__link stat__btn " href="#">
         Купить сейчас
        </a>
       </div>
      </div>
-    </div>
-   </div>
+    </li>
+   </ul>
    </div>
    </div>
   </section>
+
   <section class="info">
    <div class="container">
     <div class="info__items">
@@ -245,16 +253,20 @@
      </li>
     </ul>
 
-    <div class="top-items__content">
-     <div class="top-item top-item--new top-item--sale50 mix category-a">
+    <ul class="top-items__content">
+
+     <div class="top-item mix category-a">
       <div class="top-item__like">
-       <a class="top-item__like-link" href="#">
+       <span class="top-item__new hidden">Новинка</span>
+       <span class="top-item__sale50 line-2">-50%</span>
+       <span class="top-item__hit line-1">Новинка</span>
+       <button class="top-item__like-link" type="submit">
         <svg width="32" height="29" viewBox="0 0 32 29" fill="none">
          <path
           d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
           fill="#C1C1C1" />
         </svg>
-       </a>
+       </button>
       </div>
       <div class="top-item__box">
        <img class="top-item__content" src="images/items-content/1.jpg" alt="Ананас">
@@ -311,7 +323,7 @@
       <div class="top-item__box">
        <img class="top-item__content" src="images/items-content/2.jpg" alt="лимон">
        <div class="top-item__box-link">
-        <button class="top-item__link-go" href="#">
+        <button class="top-item__link-go">
          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
           <path
            d="M8.24218 16.4718C3.69742 16.4718 0 12.7772 0 8.23588C0 3.69459 3.69742 0 8.24218 0C12.7869 0 16.4844 3.69459 16.4844 8.23588C16.4844 12.7772 12.7869 16.4718 8.24218 16.4718ZM8.24218 1.5613C4.55898 1.5613 1.5625 4.5555 1.5625 8.23588C1.5625 11.9163 4.55898 14.9105 8.24218 14.9105C11.9254 14.9105 14.9219 11.9163 14.9219 8.23588C14.9219 4.5555 11.9254 1.5613 8.24218 1.5613ZM19.7712 19.7713C20.0763 19.4665 20.0763 18.9722 19.7712 18.6673L16.2751 15.1739C15.97 14.869 15.4753 14.869 15.1702 15.1739C14.8651 15.4788 14.8651 15.9731 15.1702 16.2779L18.6663 19.7713C18.8188 19.9238 19.0188 20 19.2188 20C19.4187 20 19.6186 19.9238 19.7712 19.7713Z"
@@ -363,7 +375,7 @@
       <div class="top-item__box">
        <img class="top-item__content" src="images/items-content/3.jpg" alt="Питахайя">
        <div class="top-item__box-link">
-        <button class="top-item__link-go" href="#">
+        <button class="top-item__link-go">
          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
           <path
            d="M8.24218 16.4718C3.69742 16.4718 0 12.7772 0 8.23588C0 3.69459 3.69742 0 8.24218 0C12.7869 0 16.4844 3.69459 16.4844 8.23588C16.4844 12.7772 12.7869 16.4718 8.24218 16.4718ZM8.24218 1.5613C4.55898 1.5613 1.5625 4.5555 1.5625 8.23588C1.5625 11.9163 4.55898 14.9105 8.24218 14.9105C11.9254 14.9105 14.9219 11.9163 14.9219 8.23588C14.9219 4.5555 11.9254 1.5613 8.24218 1.5613ZM19.7712 19.7713C20.0763 19.4665 20.0763 18.9722 19.7712 18.6673L16.2751 15.1739C15.97 14.869 15.4753 14.869 15.1702 15.1739C14.8651 15.4788 14.8651 15.9731 15.1702 16.2779L18.6663 19.7713C18.8188 19.9238 19.0188 20 19.2188 20C19.4187 20 19.6186 19.9238 19.7712 19.7713Z"
@@ -415,7 +427,7 @@
       <div class="top-item__box">
        <img class="top-item__content" src="images/items-content/4.jpg" alt="Кепчук">
        <div class="top-item__box-link">
-        <button class="top-item__link-go" href="#">
+        <button class="top-item__link-go">
          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
           <path
            d="M8.24218 16.4718C3.69742 16.4718 0 12.7772 0 8.23588C0 3.69459 3.69742 0 8.24218 0C12.7869 0 16.4844 3.69459 16.4844 8.23588C16.4844 12.7772 12.7869 16.4718 8.24218 16.4718ZM8.24218 1.5613C4.55898 1.5613 1.5625 4.5555 1.5625 8.23588C1.5625 11.9163 4.55898 14.9105 8.24218 14.9105C11.9254 14.9105 14.9219 11.9163 14.9219 8.23588C14.9219 4.5555 11.9254 1.5613 8.24218 1.5613ZM19.7712 19.7713C20.0763 19.4665 20.0763 18.9722 19.7712 18.6673L16.2751 15.1739C15.97 14.869 15.4753 14.869 15.1702 15.1739C14.8651 15.4788 14.8651 15.9731 15.1702 16.2779L18.6663 19.7713C18.8188 19.9238 19.0188 20 19.2188 20C19.4187 20 19.6186 19.9238 19.7712 19.7713Z"
@@ -519,7 +531,7 @@
       <div class="top-item__box">
        <img class="top-item__content" src="images/items-content/6.jpg" alt="Напиток апельсин">
        <div class="top-item__box-link">
-        <button class="top-item__link-go" href="#">
+        <button class="top-item__link-go">
          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
           <path
            d="M8.24218 16.4718C3.69742 16.4718 0 12.7772 0 8.23588C0 3.69459 3.69742 0 8.24218 0C12.7869 0 16.4844 3.69459 16.4844 8.23588C16.4844 12.7772 12.7869 16.4718 8.24218 16.4718ZM8.24218 1.5613C4.55898 1.5613 1.5625 4.5555 1.5625 8.23588C1.5625 11.9163 4.55898 14.9105 8.24218 14.9105C11.9254 14.9105 14.9219 11.9163 14.9219 8.23588C14.9219 4.5555 11.9254 1.5613 8.24218 1.5613ZM19.7712 19.7713C20.0763 19.4665 20.0763 18.9722 19.7712 18.6673L16.2751 15.1739C15.97 14.869 15.4753 14.869 15.1702 15.1739C14.8651 15.4788 14.8651 15.9731 15.1702 16.2779L18.6663 19.7713C18.8188 19.9238 19.0188 20 19.2188 20C19.4187 20 19.6186 19.9238 19.7712 19.7713Z"
@@ -571,7 +583,7 @@
       <div class="top-item__box">
        <img class="top-item__content" src="images/items-content/7.jpg" alt="Кофе с коноплей">
        <div class="top-item__box-link">
-        <button class="top-item__link-go" href="#">
+        <button class="top-item__link-go">
          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
           <path
            d="M8.24218 16.4718C3.69742 16.4718 0 12.7772 0 8.23588C0 3.69459 3.69742 0 8.24218 0C12.7869 0 16.4844 3.69459 16.4844 8.23588C16.4844 12.7772 12.7869 16.4718 8.24218 16.4718ZM8.24218 1.5613C4.55898 1.5613 1.5625 4.5555 1.5625 8.23588C1.5625 11.9163 4.55898 14.9105 8.24218 14.9105C11.9254 14.9105 14.9219 11.9163 14.9219 8.23588C14.9219 4.5555 11.9254 1.5613 8.24218 1.5613ZM19.7712 19.7713C20.0763 19.4665 20.0763 18.9722 19.7712 18.6673L16.2751 15.1739C15.97 14.869 15.4753 14.869 15.1702 15.1739C14.8651 15.4788 14.8651 15.9731 15.1702 16.2779L18.6663 19.7713C18.8188 19.9238 19.0188 20 19.2188 20C19.4187 20 19.6186 19.9238 19.7712 19.7713Z"
@@ -621,7 +633,7 @@
       <div class="top-item__box">
        <img class="top-item__content" src="images/items-content/8.jpg" alt="Перец">
        <div class="top-item__box-link">
-        <button class="top-item__link-go" href="#">
+        <button class="top-item__link-go">
          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
           <path
            d="M8.24218 16.4718C3.69742 16.4718 0 12.7772 0 8.23588C0 3.69459 3.69742 0 8.24218 0C12.7869 0 16.4844 3.69459 16.4844 8.23588C16.4844 12.7772 12.7869 16.4718 8.24218 16.4718ZM8.24218 1.5613C4.55898 1.5613 1.5625 4.5555 1.5625 8.23588C1.5625 11.9163 4.55898 14.9105 8.24218 14.9105C11.9254 14.9105 14.9219 11.9163 14.9219 8.23588C14.9219 4.5555 11.9254 1.5613 8.24218 1.5613ZM19.7712 19.7713C20.0763 19.4665 20.0763 18.9722 19.7712 18.6673L16.2751 15.1739C15.97 14.869 15.4753 14.869 15.1702 15.1739C14.8651 15.4788 14.8651 15.9731 15.1702 16.2779L18.6663 19.7713C18.8188 19.9238 19.0188 20 19.2188 20C19.4187 20 19.6186 19.9238 19.7712 19.7713Z"
@@ -659,10 +671,57 @@
        </div>
       </div>
      </div>
-    </div>
+    </ul>
     <a class="top-items__button" href="#">
      Показать ещё
     </a>
+    <ul class="top-goods">
+
+     <li class="top-goods__good" style="background-image: url(images/top-goods/1.jpg);width: 630px;height: 300px;">
+      <div class="top-goods__good-content">
+       <p class="top-goods__good-text top-goods__decor1">
+        СВЕЖАЙШИЕ ФРУКТЫ
+       </p>
+       <h4 class="top-goods__good-title top-goods__decor2">
+        НАЧНИ ФРУКТОВОЕ ЛЕТО
+        ВСЕГО От 99 ₽
+       </h4>
+       <a href="" class="top-goods__good-link top-goods__decor1">
+        ПЕРЕЙТИ К ПОКУПКАМ
+
+       </a>
+      </div>
+     </li>
+     <li class="top-goods__good" style="background-image: url(images/top-goods/2.jpg);width: 300px;height: 300px;">
+      <div class="top-goods__good-content">
+       <p class="top-goods__good-text">
+        СЕЗОННАЯ РАСПРОДАЖА
+       </p>
+       <h4 class="top-goods__good-title">
+        ОВОЩЕПАД ДО -50%
+       </h4>
+       <a href="" class="top-goods__good-link">
+        ПЕРЕЙТИ К ПОКУПКАМ
+       </a>
+      </div>
+     </li>
+     <li class="top-goods__good" style="background-image: url(images/top-goods/3.jpg);width: 300px;height: 300px;">
+      <div class="top-goods__good-content">
+       <p class="top-goods__good-text">
+        НЯМ-НЯМ
+
+       </p>
+       <h4 class="top-goods__good-title">
+        СВЕЖИЙ
+        ХЛЕБЧИК
+       </h4>
+       <a href="" class="top-goods__good-link">
+        ПЕРЕЙТИ К ПОКУПКАМ
+
+       </a>
+      </div>
+     </li>
+    </ul>
    </div>
   </section>
  </main>
@@ -727,9 +786,9 @@
     <div class="footer-top__contacts">
      <p class="footer-top__contacts-text">
       Горячая линия
-      <a class="footer-top__contacts-phone" href="tel:7907288365">
      </p>
-     +7 907 288 365
+     <a class="footer-top__contacts-phone" href="tel:7907288365">
+      +7 907 288 365
      </a>
      <a class="footer-top__contacts-adress" href="#">
       Санкт-Петербург, ул. Ленина, 1
@@ -741,6 +800,7 @@
          <path
           d="M21.6503 5.31333H24.5514V0.225333C24.0509 0.156 22.3296 0 20.3249 0C16.1421 0 13.2767 2.64933 13.2767 7.51867V12H8.66095V17.688H13.2767V32H18.9359V17.6893H23.365L24.0681 12.0013H18.9346V8.08267C18.9359 6.43867 19.3755 5.31333 21.6503 5.31333Z"
           fill="white" />
+        </svg>
        </a>
       </li>
       <li class="footer-top__social-list">
@@ -749,6 +809,7 @@
          <path
           d="M31.2392 7.90543L31.2789 8.16677C30.8949 6.79477 29.8581 5.7361 28.5407 5.35077L28.5128 5.3441C26.0355 4.66677 16.0664 4.66677 16.0664 4.66677C16.0664 4.66677 6.12239 4.65343 3.61985 5.3441C2.27722 5.7361 1.23913 6.79477 0.861762 8.13877L0.855142 8.16677C-0.0704011 13.0348 -0.0770217 18.8841 0.896189 24.0961L0.855142 23.8321C1.23913 25.2041 2.2759 26.2628 3.59337 26.6481L3.62118 26.6548C6.09591 27.3334 16.0677 27.3334 16.0677 27.3334C16.0677 27.3334 26.0103 27.3334 28.5142 26.6548C29.8581 26.2628 30.8962 25.2041 31.2736 23.8601L31.2802 23.8321C31.7013 21.5681 31.9423 18.9628 31.9423 16.3014C31.9423 16.2041 31.9423 16.1054 31.9409 16.0068C31.9423 15.9161 31.9423 15.8081 31.9423 15.7001C31.9423 13.0374 31.7013 10.4321 31.2392 7.90543ZM12.8859 20.8681V11.1441L21.1827 16.0134L12.8859 20.8681Z"
           fill="white" />
+        </svg>
        </a>
       </li>
       <li class="footer-top__social-list">
@@ -757,6 +818,7 @@
          <path
           d="M13.3281 20.2415L12.8024 27.6868C13.5545 27.6868 13.8802 27.3615 14.2708 26.9708L17.7969 23.5775L25.1032 28.9655C26.4432 29.7175 27.3873 29.3215 27.7488 27.7241L32.5447 5.0948L32.546 5.09347C32.971 3.0988 31.8296 2.3188 30.5241 2.80813L2.3341 13.6761C0.410193 14.4281 0.439323 15.5081 2.00705 15.9975L9.2141 18.2548L25.9546 7.7068C26.7425 7.18147 27.4588 7.47213 26.8696 7.99747L13.3281 20.2415Z"
           fill="white" />
+        </svg>
        </a>
       </li>
       <li class="footer-top__social-list">
@@ -771,6 +833,7 @@
          <path
           d="M24.9255 9.37859C25.9778 9.37859 26.8309 8.51957 26.8309 7.45992C26.8309 6.40027 25.9778 5.54126 24.9255 5.54126C23.8732 5.54126 23.0201 6.40027 23.0201 7.45992C23.0201 8.51957 23.8732 9.37859 24.9255 9.37859Z"
           fill="white" />
+        </svg>
        </a>
       </li>
      </ul>

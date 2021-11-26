@@ -1,8 +1,9 @@
-html,body{
+html,
+body {
  height: 100%;
 }
 
-body{
+body {
  background-color: $white;
  color: $dark-500;
  font-size: 15px;
@@ -13,12 +14,46 @@ body{
  flex-direction: column;
 }
 
-.main{
+.main {
  flex-grow: 1;
 }
 
-.container{
+.container {
  max-width: 1320px;
  padding: 0 15px;
  margin: 0 auto;
+}
+
+.title {
+ font-size: 32px;
+ @extend %ruda-600;
+ color: $dark-900;
+ text-transform: uppercase;
+}
+
+.btn {
+ padding: 12px 24px;
+ color: $white;
+ background-color: $green-900;
+ @extend %opensans-400;
+ font-size: 18px;
+ border-radius: 6px;
+ width: 182px;
+ opacity: 1;
+ display: block;
+ letter-spacing: 0.03em;
+ transition: all .5s;
+
+ &:hover {
+  background-color: #4D810C;
+ }
+
+ &:focus {
+  box-shadow: 0px 0px 0px 4px $green-200;
+ }
+
+ &:active {
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  opacity: 0.5;
+ }
 }

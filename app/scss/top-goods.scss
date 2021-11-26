@@ -6,7 +6,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-
+  border-radius: 6px;
   &:not(:last-child) {
    margin-right: 30px;
   }
@@ -17,6 +17,7 @@
   text-transform: uppercase;
   color: $dark-500;
   letter-spacing: 0;
+  
  }
 
  &__good-text {

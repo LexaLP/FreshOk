@@ -1,0 +1,56 @@
+.user-nav {
+ display: flex;
+
+
+ &__link {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  padding: 9px 9px;
+ }
+
+ &__link {
+  transition: all .5s;
+
+  &:hover {
+   background-color: rgba(255, 255, 255, 0.1);
+   border-radius: 3px;
+  }
+
+  &:focus {
+   background-color: rgba(255, 255, 255, 0.1);
+   box-shadow: inset 0px 0px 0px 3px $green-200;
+   border-radius: 3px;
+  }
+
+  &:active {
+   opacity: 0.1;
+   border-radius: 3px;
+  }
+
+ }
+
+ &__link:not(:last-child) {
+  margin-right: 12px;
+ }
+
+ &__num {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  top: 3px;
+  left: 3px;
+  text-align: center;
+  padding-right: 2px;
+  background-color: $white;
+  color: $red-900;
+  font-size: 10px;
+  font-weight: 600;
+ }
+}
+
+.user {
+ padding: 9px 12px;
+}

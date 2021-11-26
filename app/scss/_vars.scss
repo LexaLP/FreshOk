@@ -59,17 +59,5 @@ $white:#FFFFFF;
  font-weight: 900;
 }
 
-%btn {
- padding: 12px 24px;
- color: $white;
- background-color: $green-900;
- @extend %opensans-400;
- font-size: 18px;
- border-radius: 6px;
- width: 182px;
- opacity: 1;
- display: block;
- letter-spacing: 0.03em;
-}
 
 

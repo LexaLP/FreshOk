@@ -6,10 +6,16 @@ $(function () {
   nextArrow: '<button type="button" class="slick-next"><img src="../images/slider_bg/arrow-right.svg" alt="right"></button>',
   fade: true,
   infinite: false
-  
  });
 
+ $(".star").rateYo({
+  numStars: 1,
+  starWidth: "16px",
+  readOnly:true
+  });
 
  var mixer = mixitup('.top-items__content');
+ var mixer = mixitup('.sale__content');
+
 
 });

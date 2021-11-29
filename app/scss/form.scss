@@ -1,0 +1,69 @@
+.form {
+ &__inner {
+  display: inline-flex;
+  background-color: $white;
+  border-radius: 6px;
+  align-items: center;
+  padding-left: 12px;
+  max-width: 576px;
+  width: 100%;
+
+ }
+
+ &__search {
+  width: 419px;
+  height: 50px;
+  border: none;
+
+ }
+
+ &__img {
+  order: -1;
+  margin-right: 11px;
+  padding: 7px;
+  transition: all .5s;
+
+  &:active {
+   opacity: 0.5;
+  }
+ }
+
+
+
+ &__search::placeholder {
+  color: $dark-800;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+ }
+
+ &__btn {
+  max-width: 156px;
+  width: 100%;
+  font-size: 14px;
+  height: 50px;
+  padding: 15px 52px;
+  border-right: 1px solid black;
+  border-radius: 0 6px 6px 0;
+  background-color: $dark-800;
+  color: $white;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all .5s;
+  border: none;
+  &:hover {
+   background: rgba(49, 53, 43, 0.85);
+  }
+
+  // При фокусе вручную - не виден. Принудительно через инспектор - задаётся ! ↓
+  &:focus {
+   box-shadow: 0px 0px 0px 4px $green-200;
+  }
+
+  &:active {
+   opacity: 0.5;
+  }
+
+ }
+
+}

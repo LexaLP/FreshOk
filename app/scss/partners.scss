@@ -1,0 +1,19 @@
+.partners {
+ padding: 72px 0;
+
+ &__list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+ }
+
+ &__logo {
+  transition: all 0.5s;
+  opacity: 0.5;
+  cursor: pointer;
+
+  &:hover {
+   opacity: 1;
+  }
+ }
+}

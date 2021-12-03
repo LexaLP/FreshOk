@@ -12,8 +12,22 @@ const uglify = require('gulp-uglify');
 const image = require('gulp-image');
 const del = require('del');
 const browserSync = require('browser-sync').create();
+const svgSprite = require('gulp-svg-sprite');
 
 
+function svgSprites() {
+ return src('app/images/icons/*.svg') // выбираем в папке с иконками все файлы с расширением svg
+  .pipe(
+   svgSprite({
+    mode: {
+     stack: {
+      sprite: '../sprite.svg', // указываем имя файла спрайта и путь
+     },
+    },
+   })
+  )
+  .pipe(dest('app/images')); // указываем, в какую папку поместить готовый файл спрайта
+}
 
 
 function browsersync() {
@@ -86,6 +100,7 @@ function watching() {
  watch(['app/scss/**/*.scss'], styles);
  watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
  watch(['app/**/*.html']).on('change', browserSync.reload);
+ watch(['app/images/icons/*.svg'], svgSprites);
 }
 
 
@@ -95,7 +110,9 @@ exports.browserSync = browsersync;
 exports.watching = watching;
 exports.images = images;
 exports.cleanDist = cleanDist;
+exports.svgSprites = svgSprites;
 exports.build = series(cleanDist, images, build);
 
 
-exports.default = parallel(styles, scripts, browsersync, watching);
+exports.default = parallel(styles, scripts, browsersync, watching, svgSprites, );
+

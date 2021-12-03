@@ -106,45 +106,54 @@
    transition: all .5s;
   }
 
+  &::after {
+   content: '';
+   position: absolute;
+   background-image: url('../images/item-icons/search.svg');
+   background-repeat: no-repeat;
+   background-position: center center;
+   width: 48px;
+   height: 48px;
+   padding: 14px;
+   background-color: $white;
+   border-radius: 50%;
+   border: none;
+   top: 40%;
+   left: 40%;
+   transform: translateY(300%);
+   transition: transform 0.5s,
+    background-color 0.5s;
+  }
+
+  &:hover::after {
+   transform: translateY(0);
+  }
+
   &:hover::before {
    background-color: rgba(0, 0, 0, 0.1);
   }
  }
-
- &__box-link {
-  transition: all .3s;
-  position: absolute;
-  top: 40%;
-  left: 40%;
-  transform: translateY(300%);
- }
-
- &__link-go {
-  width: 48px;
-  height: 48px;
-  padding: 14px;
-  background-color: $white;
-  border-radius: 50%;
-  border: none;
- }
-
- &:hover {
-  .product__box-link {
-   transform: translateY(0);
-  }
+ &__star-num{
+   display: flex;
+   position: absolute;
+   bottom: 126px;
+   right: 17px;
  }
 
  &__name {
   display: inline-block;
+ }
+
+ &__name-title {
   font-size: 14px;
   color: $dark-900;
   font-weight: 600;
   padding: 0 16px;
   height: 60px;
   margin-bottom: 10px;
-  overflow: hidden;
-  white-space: inherit;
-  text-overflow: ellipsis;
+  // overflow: hidden;
+  // white-space: inherit;
+  // text-overflow: ellipsis;
   transition: all 0.5s;
 
   &:hover {
@@ -218,6 +227,29 @@
    opacity: 0.5;
   }
  }
+
+ &__status--stock {
+  color: $green-900;
+ }
+
+ &__status--ends {
+  color: $red-900;
+ }
+
+ &__status--not {
+  color: $silver-600;
+ }
+
+ &__status {
+  content: '';
+  position: absolute;
+  bottom: 128px;
+  left: 17px;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 1;
+  text-transform: uppercase;
+ }
 }
 
 .hidden {
@@ -237,3 +269,4 @@
  top: 30px;
  left: 12px;
 }
+

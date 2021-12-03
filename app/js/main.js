@@ -10,7 +10,7 @@ $(function () {
 
 
 
- const cropElement = document.querySelectorAll('.product__name'), // выбор элементов  
+ const cropElement = document.querySelectorAll('.product__name-title'), // выбор элементов  
   size = 92 // кол-во символов  
  endCharacter = '...'; // окончание  
 
@@ -45,8 +45,24 @@ $(function () {
 
 
 $(function () {
- const cropElement = document.querySelectorAll('.sale__wrapper .product__name'), // выбор элементов  
-  size = 55 // кол-во символов  
+ const cropElement = document.querySelectorAll('.sale__wrapper .product__name-title'), // выбор элементов  
+  size = 70 // кол-во символов  
+ endCharacter = '...'; // окончание  
+
+ cropElement.forEach(el => {
+  let text = el.innerHTML;
+
+  if (el.innerHTML.length > size) {
+   text = text.substr(0, size);
+   el.innerHTML = text + endCharacter;
+  }
+ });
+
+})
+
+$(function () {
+ const cropElement = document.querySelectorAll('.news__link-text'), // выбор элементов  
+  size = 105 // кол-во символов  
  endCharacter = '...'; // окончание  
 
  cropElement.forEach(el => {

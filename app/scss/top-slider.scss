@@ -22,7 +22,6 @@
    max-width: 885px;
    width: 100%;
    text-transform: uppercase;
-   margin-bottom: 8px;
   }
 
   &__title-span {
@@ -34,6 +33,8 @@
    white-space: nowrap;
    overflow: hidden;
    text-overflow: ellipsis;
+   text-transform: uppercase;
+   margin-bottom: 8px;
   }
 
   &__text {

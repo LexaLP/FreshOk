@@ -17,7 +17,7 @@
    <div class="header__top">
     <div class="header__info">
      <div class="header__info-item">
-      <h1 class="visually-hidden"></h1>
+      <h1 class="visually-hidden">h1</h1>
       <a class="header__info-links" href="#">
        <svg class="header__info-svg" width="32" height="23" viewBox="0 0 32 23" fill="none">
         <path
@@ -98,7 +98,7 @@
       </svg>
      </button>
 
-     <form class="header__search" action="">
+     <form class="header__search" action="#">
       <div class="form__inner">
        <input class="form__search" type="search" placeholder="Найти в магазине ...">
        <a class="form__img" href="#" aria-label="Поиск">
@@ -108,22 +108,19 @@
           fill="#31352B" />
         </svg>
        </a>
-       <button class="form__btn" type="submit">
-        Поиск
-       </button>
       </div>
+      <button class="form__btn" type="submit">
+       Поиск
+      </button>
      </form>
 
      <div class="user-nav">
       <a class="user-nav__link bg-user" href="#" aria-label="Кабинет">
-       <!-- <img class="user-nav__link-img" src="images/user-icons/user.svg" alt="иконка пользователя"> -->
       </a>
       <a class="user-nav__link bg-heart" href="#" aria-label="Избранное">
-       <!-- <img class="user-nav__link-img heart-img" src="images/user-icons/heart.svg" alt="иконка избранного"> -->
        <span class="user-nav__num">12</span>
       </a>
       <a class="user-nav__link bg-cart" href="#" aria-label="Корзина">
-       <!-- <img class="user-nav__link-img cart-img" src="images/user-icons/cart.svg" alt="иконка корзины"> -->
        <span class="user-nav__num">12</span>
       </a>
      </div>
@@ -141,11 +138,11 @@
      <div class="container top-slider__container">
       <div class="top-slider__content">
        <h2 class="top-slider__title">
-        СВЕЖАЧОК ВАМ в ХАТУ 
-        <div class="top-slider__title-span">
-         Скидка -50%
-        </div>
+        СВЕЖАЧОК ВАМ в ХАТУ
        </h2>
+       <div class="top-slider__title-span">
+        Скидка -50%
+       </div>
        <p class="top-slider__text">
         Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!
        </p>
@@ -161,10 +158,10 @@
       <div class="top-slider__content">
        <h2 class="top-slider__title">
         НАКРУТИ СЕБЕ ТОМАТОВ
-        <div class="top-slider__title-span">
-         АКЦИЯ: 3 кг по цене 1
-        </div>
        </h2>
+       <div class="top-slider__title-span">
+        АКЦИЯ: 3 кг по цене 1
+       </div>
        <p class="top-slider__text">
         Только с 12 по 15 июля скидка на домашние помидорчики
        </p>
@@ -181,11 +178,10 @@
        <h2 class="top-slider__title">
         Пусть остальные
         позеленеют от зависти
-        <div class="top-slider__title-span">
-         Распродажа зелени 
-
-        </div>
        </h2>
+       <div class="top-slider__title-span">
+        Распродажа зелени
+       </div>
        <a class="top-slider__link btn " href="#">
         Купить сейчас
        </a>
@@ -193,8 +189,6 @@
      </div>
     </li>
    </ul>
-   </div>
-   </div>
   </section>
 
   <section class="info">
@@ -236,27 +230,27 @@
     <div class="filter" data-ref="mix1">
      <ul class="top-items__filter">
       <li class="top-items__list">
-       <button class="top-items__btn" type="button" data-filter="all">
+       <button class="top-items__btn filter-btn" type="button" data-filter="all">
         Все товары
        </button>
       </li>
       <li class="top-items__list">
-       <button class="top-items__btn" type="button" data-filter=".category-a">
+       <button class="top-items__btn filter-btn" type="button" data-filter=".category-a">
         Фрукты
        </button>
       </li>
       <li class="top-items__list">
-       <button class="top-items__btn" type="button" data-filter=".category-b">
+       <button class="top-items__btn filter-btn" type="button" data-filter=".category-b">
         Овощи
        </button>
       </li>
       <li class="top-items__list">
-       <button class="top-items__btn" type="button" data-filter=".category-c">
+       <button class="top-items__btn filter-btn" type="button" data-filter=".category-c">
         Напитки
        </button>
       </li>
       <li class="top-items__list">
-       <button class="top-items__btn" type="button" data-filter=".category-d">
+       <button class="top-items__btn filter-btn" type="button" data-filter=".category-d">
         Бакалея
        </button>
       </li>
@@ -270,6 +264,7 @@
          <span class="product__new line-1">Новинка</span>
          <span class="product__sale line-2">-50%</span>
          <span class="product__hit hidden">Хит</span>
+
          <button class="product__like-link" type="submit">
           <svg width="32" height="29" viewBox="0 0 32 29" fill="none">
            <path
@@ -281,21 +276,21 @@
         <a href="#" class="product__link">
          <div class="product__box">
           <img class="product__content" src="images/items-content/1.jpg" alt="Ананас">
-          <div class="product__box-link">
-           <button class="product__link-go" type="button">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-             <path
-              d="M8.24218 16.4718C3.69742 16.4718 0 12.7772 0 8.23588C0 3.69459 3.69742 0 8.24218 0C12.7869 0 16.4844 3.69459 16.4844 8.23588C16.4844 12.7772 12.7869 16.4718 8.24218 16.4718ZM8.24218 1.5613C4.55898 1.5613 1.5625 4.5555 1.5625 8.23588C1.5625 11.9163 4.55898 14.9105 8.24218 14.9105C11.9254 14.9105 14.9219 11.9163 14.9219 8.23588C14.9219 4.5555 11.9254 1.5613 8.24218 1.5613ZM19.7712 19.7713C20.0763 19.4665 20.0763 18.9722 19.7712 18.6673L16.2751 15.1739C15.97 14.869 15.4753 14.869 15.1702 15.1739C14.8651 15.4788 14.8651 15.9731 15.1702 16.2779L18.6663 19.7713C18.8188 19.9238 19.0188 20 19.2188 20C19.4187 20 19.6186 19.9238 19.7712 19.7713Z"
-              fill="#63A60E" />
-            </svg>
-           </button>
-          </div>
          </div>
         </a>
+        <div class="product__star-num hidden">
+         4.5
+         <div class="star" data-rateyo-rating="5"></div>
+        </div>
         <a class="product__name">
-         Ананас, 1кг
+         <h3 class="product__name-title">
+          Ананас, 1кг
+         </h3>
         </a>
         <div class="product__inner">
+         <span class="product__status product__status--stock hidden">В наличии</span>
+         <span class="product__status product__status--ends hidden">Заканчивается</span>
+         <span class="product__status product__status--not hidden">Нет в наличии</span>
          <div class="product__price">
           <p class="product__old-price product__old-price--decor">
            1999 ₽
@@ -340,21 +335,21 @@
         <a href="#" class="product__link">
          <div class="product__box">
           <img class="product__content" src="images/items-content/2.jpg" alt="Лимон">
-          <div class="product__box-link">
-           <button class="product__link-go" type="button">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-             <path
-              d="M8.24218 16.4718C3.69742 16.4718 0 12.7772 0 8.23588C0 3.69459 3.69742 0 8.24218 0C12.7869 0 16.4844 3.69459 16.4844 8.23588C16.4844 12.7772 12.7869 16.4718 8.24218 16.4718ZM8.24218 1.5613C4.55898 1.5613 1.5625 4.5555 1.5625 8.23588C1.5625 11.9163 4.55898 14.9105 8.24218 14.9105C11.9254 14.9105 14.9219 11.9163 14.9219 8.23588C14.9219 4.5555 11.9254 1.5613 8.24218 1.5613ZM19.7712 19.7713C20.0763 19.4665 20.0763 18.9722 19.7712 18.6673L16.2751 15.1739C15.97 14.869 15.4753 14.869 15.1702 15.1739C14.8651 15.4788 14.8651 15.9731 15.1702 16.2779L18.6663 19.7713C18.8188 19.9238 19.0188 20 19.2188 20C19.4187 20 19.6186 19.9238 19.7712 19.7713Z"
-              fill="#63A60E" />
-            </svg>
-           </button>
-          </div>
          </div>
         </a>
+         <div class="product__star-num hidden">
+          4.5
+          <div class="star" data-rateyo-rating="5"></div>
+         </div>
         <a class="product__name">
-         Лимон, 1кг
+         <h3 class="product__name-title">
+          Лимон, 1кг
+         </h3>
         </a>
         <div class="product__inner">
+         <span class="product__status product__status--stock hidden">В наличии</span>
+         <span class="product__status product__status--ends hidden">Заканчивается</span>
+         <span class="product__status product__status--not hidden">Нет в наличии</span>
          <div class="product__price">
           <p class="product__old-price">
 
@@ -399,21 +394,21 @@
         <a href="#" class="product__link">
          <div class="product__box">
           <img class="product__content" src="images/items-content/3.jpg" alt="Ананас">
-          <div class="product__box-link">
-           <button class="product__link-go" type="button">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-             <path
-              d="M8.24218 16.4718C3.69742 16.4718 0 12.7772 0 8.23588C0 3.69459 3.69742 0 8.24218 0C12.7869 0 16.4844 3.69459 16.4844 8.23588C16.4844 12.7772 12.7869 16.4718 8.24218 16.4718ZM8.24218 1.5613C4.55898 1.5613 1.5625 4.5555 1.5625 8.23588C1.5625 11.9163 4.55898 14.9105 8.24218 14.9105C11.9254 14.9105 14.9219 11.9163 14.9219 8.23588C14.9219 4.5555 11.9254 1.5613 8.24218 1.5613ZM19.7712 19.7713C20.0763 19.4665 20.0763 18.9722 19.7712 18.6673L16.2751 15.1739C15.97 14.869 15.4753 14.869 15.1702 15.1739C14.8651 15.4788 14.8651 15.9731 15.1702 16.2779L18.6663 19.7713C18.8188 19.9238 19.0188 20 19.2188 20C19.4187 20 19.6186 19.9238 19.7712 19.7713Z"
-              fill="#63A60E" />
-            </svg>
-           </button>
-          </div>
          </div>
         </a>
+         <div class="product__star-num hidden">
+          4.5
+          <div class="star" data-rateyo-rating="5"></div>
+         </div>
         <a class="product__name">
-         Питахайя красная с белой мякотью, 1шт
+         <h3 class="product__name-title">
+          Питахайя красная с белой мякотью, 1шт
+         </h3>
         </a>
         <div class="product__inner">
+         <span class="product__status product__status--stock hidden">В наличии</span>
+         <span class="product__status product__status--ends hidden">Заканчивается</span>
+         <span class="product__status product__status--not hidden">Нет в наличии</span>
          <div class="product__price">
           <p class="product__old-price">
 
@@ -458,21 +453,21 @@
         <a href="#" class="product__link">
          <div class="product__box">
           <img class="product__content" src="images/items-content/4.jpg" alt="Кепчук">
-          <div class="product__box-link">
-           <button class="product__link-go" type="button">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-             <path
-              d="M8.24218 16.4718C3.69742 16.4718 0 12.7772 0 8.23588C0 3.69459 3.69742 0 8.24218 0C12.7869 0 16.4844 3.69459 16.4844 8.23588C16.4844 12.7772 12.7869 16.4718 8.24218 16.4718ZM8.24218 1.5613C4.55898 1.5613 1.5625 4.5555 1.5625 8.23588C1.5625 11.9163 4.55898 14.9105 8.24218 14.9105C11.9254 14.9105 14.9219 11.9163 14.9219 8.23588C14.9219 4.5555 11.9254 1.5613 8.24218 1.5613ZM19.7712 19.7713C20.0763 19.4665 20.0763 18.9722 19.7712 18.6673L16.2751 15.1739C15.97 14.869 15.4753 14.869 15.1702 15.1739C14.8651 15.4788 14.8651 15.9731 15.1702 16.2779L18.6663 19.7713C18.8188 19.9238 19.0188 20 19.2188 20C19.4187 20 19.6186 19.9238 19.7712 19.7713Z"
-              fill="#63A60E" />
-            </svg>
-           </button>
-          </div>
          </div>
         </a>
+         <div class="product__star-num hidden">
+          4.5
+          <div class="star" data-rateyo-rating="5"></div>
+         </div>
         <a class="product__name">
-         Кетчуп томатный детский органический Bio-Zentrale 500мл, 1 шт
+         <h3 class="product__name-title">
+          Кетчуп томатный детский органический Bio-Zentrale 500мл, 1 шт
+         </h3>
         </a>
         <div class="product__inner">
+         <span class="product__status product__status--stock hidden">В наличии</span>
+         <span class="product__status product__status--ends hidden">Заканчивается</span>
+         <span class="product__status product__status--not hidden">Нет в наличии</span>
          <div class="product__price">
           <p class="product__old-price">
 
@@ -517,21 +512,21 @@
         <a href="#" class="product__link">
          <div class="product__box">
           <img class="product__content" src="images/items-content/5.jpg" alt="Ананас">
-          <div class="product__box-link">
-           <button class="product__link-go" type="button">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-             <path
-              d="M8.24218 16.4718C3.69742 16.4718 0 12.7772 0 8.23588C0 3.69459 3.69742 0 8.24218 0C12.7869 0 16.4844 3.69459 16.4844 8.23588C16.4844 12.7772 12.7869 16.4718 8.24218 16.4718ZM8.24218 1.5613C4.55898 1.5613 1.5625 4.5555 1.5625 8.23588C1.5625 11.9163 4.55898 14.9105 8.24218 14.9105C11.9254 14.9105 14.9219 11.9163 14.9219 8.23588C14.9219 4.5555 11.9254 1.5613 8.24218 1.5613ZM19.7712 19.7713C20.0763 19.4665 20.0763 18.9722 19.7712 18.6673L16.2751 15.1739C15.97 14.869 15.4753 14.869 15.1702 15.1739C14.8651 15.4788 14.8651 15.9731 15.1702 16.2779L18.6663 19.7713C18.8188 19.9238 19.0188 20 19.2188 20C19.4187 20 19.6186 19.9238 19.7712 19.7713Z"
-              fill="#63A60E" />
-            </svg>
-           </button>
-          </div>
          </div>
         </a>
+         <div class="product__star-num hidden">
+          4.5
+          <div class="star" data-rateyo-rating="5"></div>
+         </div>
         <a class="product__name">
-         Морковь молодая с бабушкиной грядки, 1кг
+         <h3 class="product__name-title">
+          Морковь молодая с бабушкиной грядки, 1кг
+         </h3>
         </a>
         <div class="product__inner">
+         <span class="product__status product__status--stock hidden">В наличии</span>
+         <span class="product__status product__status--ends hidden">Заканчивается</span>
+         <span class="product__status product__status--not hidden">Нет в наличии</span>
          <div class="product__price">
           <p class="product__old-price">
 
@@ -576,21 +571,21 @@
         <a href="#" class="product__link">
          <div class="product__box">
           <img class="product__content" src="images/items-content/6.jpg" alt="Напиток">
-          <div class="product__box-link">
-           <button class="product__link-go" type="button">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-             <path
-              d="M8.24218 16.4718C3.69742 16.4718 0 12.7772 0 8.23588C0 3.69459 3.69742 0 8.24218 0C12.7869 0 16.4844 3.69459 16.4844 8.23588C16.4844 12.7772 12.7869 16.4718 8.24218 16.4718ZM8.24218 1.5613C4.55898 1.5613 1.5625 4.5555 1.5625 8.23588C1.5625 11.9163 4.55898 14.9105 8.24218 14.9105C11.9254 14.9105 14.9219 11.9163 14.9219 8.23588C14.9219 4.5555 11.9254 1.5613 8.24218 1.5613ZM19.7712 19.7713C20.0763 19.4665 20.0763 18.9722 19.7712 18.6673L16.2751 15.1739C15.97 14.869 15.4753 14.869 15.1702 15.1739C14.8651 15.4788 14.8651 15.9731 15.1702 16.2779L18.6663 19.7713C18.8188 19.9238 19.0188 20 19.2188 20C19.4187 20 19.6186 19.9238 19.7712 19.7713Z"
-              fill="#63A60E" />
-            </svg>
-           </button>
-          </div>
          </div>
         </a>
+         <div class="product__star-num hidden">
+          4.5
+          <div class="star" data-rateyo-rating="5"></div>
+         </div>
         <a class="product__name">
-         Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольн...
+         <h3 class="product__name-title">
+          Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольн...
+         </h3>
         </a>
         <div class="product__inner">
+         <span class="product__status product__status--stock hidden">В наличии</span>
+         <span class="product__status product__status--ends hidden">Заканчивается</span>
+         <span class="product__status product__status--not hidden">Нет в наличии</span>
          <div class="product__price">
           <p class="product__old-price product__old-price--decor">
            299 ₽
@@ -635,21 +630,21 @@
         <a href="#" class="product__link">
          <div class="product__box">
           <img class="product__content" src="images/items-content/7.jpg" alt="Кофе">
-          <div class="product__box-link">
-           <button class="product__link-go" type="button">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-             <path
-              d="M8.24218 16.4718C3.69742 16.4718 0 12.7772 0 8.23588C0 3.69459 3.69742 0 8.24218 0C12.7869 0 16.4844 3.69459 16.4844 8.23588C16.4844 12.7772 12.7869 16.4718 8.24218 16.4718ZM8.24218 1.5613C4.55898 1.5613 1.5625 4.5555 1.5625 8.23588C1.5625 11.9163 4.55898 14.9105 8.24218 14.9105C11.9254 14.9105 14.9219 11.9163 14.9219 8.23588C14.9219 4.5555 11.9254 1.5613 8.24218 1.5613ZM19.7712 19.7713C20.0763 19.4665 20.0763 18.9722 19.7712 18.6673L16.2751 15.1739C15.97 14.869 15.4753 14.869 15.1702 15.1739C14.8651 15.4788 14.8651 15.9731 15.1702 16.2779L18.6663 19.7713C18.8188 19.9238 19.0188 20 19.2188 20C19.4187 20 19.6186 19.9238 19.7712 19.7713Z"
-              fill="#63A60E" />
-            </svg>
-           </button>
-          </div>
          </div>
         </a>
+         <div class="product__star-num hidden">
+          4.5
+          <div class="star" data-rateyo-rating="5"></div>
+         </div>
         <a class="product__name">
-         Кофе с коноплей органический Caffé Salomoni 250г
+         <h3 class="product__name-title">
+          Кофе с коноплей органический Caffé Salomoni 250г
+         </h3>
         </a>
         <div class="product__inner">
+         <span class="product__status product__status--stock hidden">В наличии</span>
+         <span class="product__status product__status--ends hidden">Заканчивается</span>
+         <span class="product__status product__status--not hidden">Нет в наличии</span>
          <div class="product__price">
           <p class="product__old-price">
 
@@ -694,21 +689,21 @@
         <a href="#" class="product__link">
          <div class="product__box">
           <img class="product__content" src="images/items-content/8.jpg" alt="Перец">
-          <div class="product__box-link">
-           <button class="product__link-go" type="button">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-             <path
-              d="M8.24218 16.4718C3.69742 16.4718 0 12.7772 0 8.23588C0 3.69459 3.69742 0 8.24218 0C12.7869 0 16.4844 3.69459 16.4844 8.23588C16.4844 12.7772 12.7869 16.4718 8.24218 16.4718ZM8.24218 1.5613C4.55898 1.5613 1.5625 4.5555 1.5625 8.23588C1.5625 11.9163 4.55898 14.9105 8.24218 14.9105C11.9254 14.9105 14.9219 11.9163 14.9219 8.23588C14.9219 4.5555 11.9254 1.5613 8.24218 1.5613ZM19.7712 19.7713C20.0763 19.4665 20.0763 18.9722 19.7712 18.6673L16.2751 15.1739C15.97 14.869 15.4753 14.869 15.1702 15.1739C14.8651 15.4788 14.8651 15.9731 15.1702 16.2779L18.6663 19.7713C18.8188 19.9238 19.0188 20 19.2188 20C19.4187 20 19.6186 19.9238 19.7712 19.7713Z"
-              fill="#63A60E" />
-            </svg>
-           </button>
-          </div>
          </div>
         </a>
+         <div class="product__star-num hidden">
+          4.5
+          <div class="star" data-rateyo-rating="5"></div>
+         </div>
         <a class="product__name">
-         Перец оранжевый, 1кг
+         <h3 class="product__name-title">
+          Перец оранжевый, 1кг
+         </h3>
         </a>
         <div class="product__inner">
+         <span class="product__status product__status--stock hidden">В наличии</span>
+         <span class="product__status product__status--ends hidden">Заканчивается</span>
+         <span class="product__status product__status--not hidden">Нет в наличии</span>
          <div class="product__price">
           <p class="product__old-price">
 
@@ -742,8 +737,12 @@
     <a class="top-items__button" href="#">
      Показать ещё
     </a>
+  </section>
+
+  <section class="top-good">
+   <div class="container">
     <ul class="top-goods">
-     <li class="top-goods__good" style="background-image: url(images/top-goods/1.jpg);width: 630px;height: 300px;">
+     <li class="top-goods__good" style="background-image: url('images/top-goods/1.jpg');">
       <div class="top-goods__good-content">
        <p class="top-goods__good-text top-goods__decor1">
         СВЕЖАЙШИЕ ФРУКТЫ
@@ -758,7 +757,7 @@
        </a>
       </div>
      </li>
-     <li class="top-goods__good" style="background-image: url(images/top-goods/2.jpg);width: 300px;height: 300px;">
+     <li class="top-goods__good good__size" style="background-image: url('images/top-goods/2.jpg');">
       <div class="top-goods__good-content">
        <p class="top-goods__good-text">
         СЕЗОННАЯ РАСПРОДАЖА
@@ -771,7 +770,7 @@
        </a>
       </div>
      </li>
-     <li class="top-goods__good" style="background-image: url(images/top-goods/3.jpg);width: 300px;height: 300px;">
+     <li class="top-goods__good good__size" style="background-image: url('images/top-goods/3.jpg');">
       <div class="top-goods__good-content">
        <p class="top-goods__good-text">
         НЯМ-НЯМ
@@ -788,6 +787,7 @@
      </li>
     </ul>
    </div>
+   </div>
   </section>
 
   <section class="sale">
@@ -798,22 +798,23 @@
     <div class="filter2" data-ref="mix2">
      <ul class="sale__filter">
       <li class="sale__list">
-       <button class="sale__btn" type="button" data-filter="all">
+       <button class="sale__btn filter-btn" type="button" data-filter="all">
         Все товары
        </button>
       </li>
       <li class="sale__list">
-       <button class="sale__btn" type="button" data-filter=".category-e">
+       <button class="sale__btn filter-btn" type="button" data-filter=".category-e">
         Новинки
        </button>
       </li>
       <li class="sale__list">
-       <button class="sale__btn" type="button" data-filter=".category-f">
+       <button class="sale__btn filter-btn" type="button" data-filter=".category-f">
         Хиты
        </button>
       </li>
      </ul>
      <ul class="sale__content">
+
       <li class="products__list  mix category-e">
        <div class="sale__wrapper">
         <article class="product ">
@@ -821,7 +822,7 @@
           <span class="product__new line-1">Новинка</span>
           <span class="product__sale hidden">-50%</span>
           <span class="product__hit hidden">Хит</span>
-          <button class="product__like-link" type="submit">
+          <button class="product__like-link hidden" type="submit">
            <svg width="32" height="29" viewBox="0 0 32 29" fill="none">
             <path
              d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
@@ -833,32 +834,24 @@
          <a href="#" class="product__link">
           <div class="product__box">
            <img class="product__content" src="images/items-content/1.jpg" alt="Ананас">
-           <div class="product__box-link">
-            <button class="product__link-go" type="button">
-             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <path
-               d="M8.24218 16.4718C3.69742 16.4718 0 12.7772 0 8.23588C0 3.69459 3.69742 0 8.24218 0C12.7869 0 16.4844 3.69459 16.4844 8.23588C16.4844 12.7772 12.7869 16.4718 8.24218 16.4718ZM8.24218 1.5613C4.55898 1.5613 1.5625 4.5555 1.5625 8.23588C1.5625 11.9163 4.55898 14.9105 8.24218 14.9105C11.9254 14.9105 14.9219 11.9163 14.9219 8.23588C14.9219 4.5555 11.9254 1.5613 8.24218 1.5613ZM19.7712 19.7713C20.0763 19.4665 20.0763 18.9722 19.7712 18.6673L16.2751 15.1739C15.97 14.869 15.4753 14.869 15.1702 15.1739C14.8651 15.4788 14.8651 15.9731 15.1702 16.2779L18.6663 19.7713C18.8188 19.9238 19.0188 20 19.2188 20C19.4187 20 19.6186 19.9238 19.7712 19.7713Z"
-               fill="#63A60E" />
-             </svg>
-            </button>
-           </div>
           </div>
          </a>
          <div class="sale__inner">
           <a class="product__name">
-           Ананас, 1 кг
+           <h3 class="product__name-title">
+            Ананас, 1кг
+           </h3>
           </a>
-
           <div class="product__inner">
-           <span class="sale__status--stock">В наличии</span>
-           <span class="sale__status--ends hidden">Заканчивается</span>
-           <span class="sale__status--not hidden">Нет в наличии</span>
+           <span class="sale__status sale__status--stock">В наличии</span>
+           <span class="sale__status sale__status--ends hidden">Заканчивается</span>
+           <span class="sale__status sale__status--not hidden">Нет в наличии</span>
            <div class="product__price">
             <p class="product__old-price product__old-price--decor">
              1999₽
             </p>
             <p class="product__new-price">
-             999<sub>₽</sub>
+             999<span class="rouble">₽</span>
             </p>
            </div>
            <div class="star__num">
@@ -893,7 +886,7 @@
           <span class="product__new line-1">Новинка</span>
           <span class="product__sale hidden">-50%</span>
           <span class="product__hit hidden">Хит</span>
-          <button class="product__like-link" type="submit">
+          <button class="product__like-link hidden" type="submit">
            <svg width="32" height="29" viewBox="0 0 32 29" fill="none">
             <path
              d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
@@ -905,32 +898,25 @@
          <a href="#" class="product__link">
           <div class="product__box">
            <img class="product__content" src="images/items-content/7.jpg" alt="Кофе">
-           <div class="product__box-link">
-            <button class="product__link-go" type="button">
-             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <path
-               d="M8.24218 16.4718C3.69742 16.4718 0 12.7772 0 8.23588C0 3.69459 3.69742 0 8.24218 0C12.7869 0 16.4844 3.69459 16.4844 8.23588C16.4844 12.7772 12.7869 16.4718 8.24218 16.4718ZM8.24218 1.5613C4.55898 1.5613 1.5625 4.5555 1.5625 8.23588C1.5625 11.9163 4.55898 14.9105 8.24218 14.9105C11.9254 14.9105 14.9219 11.9163 14.9219 8.23588C14.9219 4.5555 11.9254 1.5613 8.24218 1.5613ZM19.7712 19.7713C20.0763 19.4665 20.0763 18.9722 19.7712 18.6673L16.2751 15.1739C15.97 14.869 15.4753 14.869 15.1702 15.1739C14.8651 15.4788 14.8651 15.9731 15.1702 16.2779L18.6663 19.7713C18.8188 19.9238 19.0188 20 19.2188 20C19.4187 20 19.6186 19.9238 19.7712 19.7713Z"
-               fill="#63A60E" />
-             </svg>
-            </button>
-           </div>
           </div>
          </a>
          <div class="sale__inner">
           <a class="product__name">
-           Кофе с коноплей органический Caffé Salomoni 250г
+           <h3 class="product__name-title">
+            Кофе с коноплей органический Caffé Salomoni 250г
+           </h3>
           </a>
 
           <div class="product__inner">
-           <span class="sale__status--stock hidden">В наличии</span>
-           <span class="sale__status--ends ">Заканчивается</span>
-           <span class="sale__status--not hidden">Нет в наличии</span>
+           <span class="sale__status sale__status--stock hidden">В наличии</span>
+           <span class="sale__status sale__status--ends ">Заканчивается</span>
+           <span class="sale__status sale__status--not hidden">Нет в наличии</span>
            <div class="product__price">
             <p class="product__old-price product__old-price--decor">
              877₽
             </p>
             <p class="product__new-price">
-             777<sub>₽</sub>
+             777<span class="rouble">₽</span>
             </p>
            </div>
            <div class="star__num">
@@ -965,7 +951,7 @@
           <span class="product__new line-1">Новинка</span>
           <span class="product__sale hidden">-50%</span>
           <span class="product__hit hidden">Хит</span>
-          <button class="product__like-link" type="submit">
+          <button class="product__like-link hidden" type="submit">
            <svg width="32" height="29" viewBox="0 0 32 29" fill="none">
             <path
              d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
@@ -977,32 +963,25 @@
          <a href="#" class="product__link">
           <div class="product__box">
            <img class="product__content" src="images/items-content/9.jpg" alt="Клубника">
-           <div class="product__box-link">
-            <button class="product__link-go" type="button">
-             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <path
-               d="M8.24218 16.4718C3.69742 16.4718 0 12.7772 0 8.23588C0 3.69459 3.69742 0 8.24218 0C12.7869 0 16.4844 3.69459 16.4844 8.23588C16.4844 12.7772 12.7869 16.4718 8.24218 16.4718ZM8.24218 1.5613C4.55898 1.5613 1.5625 4.5555 1.5625 8.23588C1.5625 11.9163 4.55898 14.9105 8.24218 14.9105C11.9254 14.9105 14.9219 11.9163 14.9219 8.23588C14.9219 4.5555 11.9254 1.5613 8.24218 1.5613ZM19.7712 19.7713C20.0763 19.4665 20.0763 18.9722 19.7712 18.6673L16.2751 15.1739C15.97 14.869 15.4753 14.869 15.1702 15.1739C14.8651 15.4788 14.8651 15.9731 15.1702 16.2779L18.6663 19.7713C18.8188 19.9238 19.0188 20 19.2188 20C19.4187 20 19.6186 19.9238 19.7712 19.7713Z"
-               fill="#63A60E" />
-             </svg>
-            </button>
-           </div>
           </div>
          </a>
          <div class="sale__inner">
           <a class="product__name">
-           Клубника, 1 кг
+           <h3 class="product__name-title">
+            Клубника, 1 кг
+           </h3>
           </a>
 
           <div class="product__inner">
-           <span class="sale__status--stock hidden">В наличии</span>
-           <span class="sale__status--ends hidden">Заканчивается</span>
-           <span class="sale__status--not ">Нет в наличии</span>
+           <span class="sale__status sale__status--stock hidden">В наличии</span>
+           <span class="sale__status sale__status--ends hidden">Заканчивается</span>
+           <span class="sale__status sale__status--not ">Нет в наличии</span>
            <div class="product__price">
             <p class="product__old-price product__old-price--decor">
              600₽
             </p>
             <p class="product__new-price">
-             440<sub>₽</sub>
+             440<span class="rouble">₽</span>
             </p>
            </div>
            <div class="star__num">
@@ -1037,7 +1016,7 @@
           <span class="product__new line-1">Новинка</span>
           <span class="product__sale hidden">-50%</span>
           <span class="product__hit hidden">Хит</span>
-          <button class="product__like-link" type="submit">
+          <button class="product__like-link hidden" type="submit">
            <svg width="32" height="29" viewBox="0 0 32 29" fill="none">
             <path
              d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
@@ -1049,32 +1028,25 @@
          <a href="#" class="product__link">
           <div class="product__box">
            <img class="product__content" src="images/items-content/10.jpg" alt="Манго">
-           <div class="product__box-link">
-            <button class="product__link-go" type="button">
-             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <path
-               d="M8.24218 16.4718C3.69742 16.4718 0 12.7772 0 8.23588C0 3.69459 3.69742 0 8.24218 0C12.7869 0 16.4844 3.69459 16.4844 8.23588C16.4844 12.7772 12.7869 16.4718 8.24218 16.4718ZM8.24218 1.5613C4.55898 1.5613 1.5625 4.5555 1.5625 8.23588C1.5625 11.9163 4.55898 14.9105 8.24218 14.9105C11.9254 14.9105 14.9219 11.9163 14.9219 8.23588C14.9219 4.5555 11.9254 1.5613 8.24218 1.5613ZM19.7712 19.7713C20.0763 19.4665 20.0763 18.9722 19.7712 18.6673L16.2751 15.1739C15.97 14.869 15.4753 14.869 15.1702 15.1739C14.8651 15.4788 14.8651 15.9731 15.1702 16.2779L18.6663 19.7713C18.8188 19.9238 19.0188 20 19.2188 20C19.4187 20 19.6186 19.9238 19.7712 19.7713Z"
-               fill="#63A60E" />
-             </svg>
-            </button>
-           </div>
           </div>
          </a>
          <div class="sale__inner">
           <a class="product__name">
-           Манго, 1 шт
+           <h3 class="product__name-title">
+            Манго, 1 шт
+           </h3>
           </a>
 
           <div class="product__inner">
-           <span class="sale__status--stock">В наличии</span>
-           <span class="sale__status--ends hidden">Заканчивается</span>
-           <span class="sale__status--not hidden">Нет в наличии</span>
+           <span class="sale__status sale__status--stock">В наличии</span>
+           <span class="sale__status sale__status--ends hidden">Заканчивается</span>
+           <span class="sale__status sale__status--not hidden">Нет в наличии</span>
            <div class="product__price">
             <p class="product__old-price product__old-price--decor">
              960₽
             </p>
             <p class="product__new-price">
-             660<sub>₽</sub>
+             660<span class="rouble">₽</span>
             </p>
            </div>
            <div class="star__num">
@@ -1109,7 +1081,7 @@
           <span class="product__new line-1">Новинка</span>
           <span class="product__sale hidden">-50%</span>
           <span class="product__hit hidden">Хит</span>
-          <button class="product__like-link" type="submit">
+          <button class="product__like-link hidden" type="submit">
            <svg width="32" height="29" viewBox="0 0 32 29" fill="none">
             <path
              d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
@@ -1121,32 +1093,25 @@
          <a href="#" class="product__link">
           <div class="product__box">
            <img class="product__content" src="images/items-content/11.jpg" alt="Семга">
-           <div class="product__box-link">
-            <button class="product__link-go" type="button">
-             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <path
-               d="M8.24218 16.4718C3.69742 16.4718 0 12.7772 0 8.23588C0 3.69459 3.69742 0 8.24218 0C12.7869 0 16.4844 3.69459 16.4844 8.23588C16.4844 12.7772 12.7869 16.4718 8.24218 16.4718ZM8.24218 1.5613C4.55898 1.5613 1.5625 4.5555 1.5625 8.23588C1.5625 11.9163 4.55898 14.9105 8.24218 14.9105C11.9254 14.9105 14.9219 11.9163 14.9219 8.23588C14.9219 4.5555 11.9254 1.5613 8.24218 1.5613ZM19.7712 19.7713C20.0763 19.4665 20.0763 18.9722 19.7712 18.6673L16.2751 15.1739C15.97 14.869 15.4753 14.869 15.1702 15.1739C14.8651 15.4788 14.8651 15.9731 15.1702 16.2779L18.6663 19.7713C18.8188 19.9238 19.0188 20 19.2188 20C19.4187 20 19.6186 19.9238 19.7712 19.7713Z"
-               fill="#63A60E" />
-             </svg>
-            </button>
-           </div>
           </div>
          </a>
          <div class="sale__inner">
           <a class="product__name">
-           Лосось, 1 кг
+           <h3 class="product__name-title">
+            Лосось, 1 кг
+           </h3>
           </a>
 
           <div class="product__inner">
-           <span class="sale__status--stock">В наличии</span>
-           <span class="sale__status--ends hidden">Заканчивается</span>
-           <span class="sale__status--not hidden">Нет в наличии</span>
+           <span class="sale__status sale__status--stock">В наличии</span>
+           <span class="sale__status sale__status--ends hidden">Заканчивается</span>
+           <span class="sale__status sale__status--not hidden">Нет в наличии</span>
            <div class="product__price">
             <p class="product__old-price product__old-price--decor">
              1999₽
             </p>
             <p class="product__new-price">
-             999<sub>₽</sub>
+             999<span class="rouble">₽</span>
             </p>
            </div>
            <div class="star__num">
@@ -1181,7 +1146,7 @@
           <span class="product__new hidden ">Новинка</span>
           <span class="product__sale hidden">-50%</span>
           <span class="product__hit line-1">Хит</span>
-          <button class="product__like-link" type="submit">
+          <button class="product__like-link hidden" type="submit">
            <svg width="32" height="29" viewBox="0 0 32 29" fill="none">
             <path
              d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
@@ -1193,32 +1158,25 @@
          <a href="#" class="product__link">
           <div class="product__box">
            <img class="product__content" src="images/items-content/12.jpg" alt="Напиток">
-           <div class="product__box-link">
-            <button class="product__link-go" type="button">
-             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <path
-               d="M8.24218 16.4718C3.69742 16.4718 0 12.7772 0 8.23588C0 3.69459 3.69742 0 8.24218 0C12.7869 0 16.4844 3.69459 16.4844 8.23588C16.4844 12.7772 12.7869 16.4718 8.24218 16.4718ZM8.24218 1.5613C4.55898 1.5613 1.5625 4.5555 1.5625 8.23588C1.5625 11.9163 4.55898 14.9105 8.24218 14.9105C11.9254 14.9105 14.9219 11.9163 14.9219 8.23588C14.9219 4.5555 11.9254 1.5613 8.24218 1.5613ZM19.7712 19.7713C20.0763 19.4665 20.0763 18.9722 19.7712 18.6673L16.2751 15.1739C15.97 14.869 15.4753 14.869 15.1702 15.1739C14.8651 15.4788 14.8651 15.9731 15.1702 16.2779L18.6663 19.7713C18.8188 19.9238 19.0188 20 19.2188 20C19.4187 20 19.6186 19.9238 19.7712 19.7713Z"
-               fill="#63A60E" />
-             </svg>
-            </button>
-           </div>
           </div>
          </a>
          <div class="sale__inner">
           <a class="product__name">
-           Сок Granini овощной 100%, 0.5л
+           <h3 class="product__name-title">
+            Сок Granini овощной 100%, 0.5л
+           </h3>
           </a>
 
           <div class="product__inner">
-           <span class="sale__status--stock hidden">В наличии</span>
-           <span class="sale__status--ends ">Заканчивается</span>
-           <span class="sale__status--not hidden">Нет в наличии</span>
+           <span class="sale__status sale__status--stock hidden">В наличии</span>
+           <span class="sale__status sale__status--ends ">Заканчивается</span>
+           <span class="sale__status sale__status--not hidden">Нет в наличии</span>
            <div class="product__price">
             <p class="product__old-price product__old-price--decor">
              230₽
             </p>
             <p class="product__new-price">
-             180<sub>₽</sub>
+             180<span class="rouble">₽</span>
             </p>
            </div>
            <div class="star__num">
@@ -1253,7 +1211,7 @@
           <span class="product__new hidden ">Новинка</span>
           <span class="product__sale hidden">-50%</span>
           <span class="product__hit line-1">Хит</span>
-          <button class="product__like-link" type="submit">
+          <button class="product__like-link hidden" type="submit">
            <svg width="32" height="29" viewBox="0 0 32 29" fill="none">
             <path
              d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
@@ -1265,32 +1223,25 @@
          <a href="#" class="product__link">
           <div class="product__box">
            <img class="product__content" src="images/items-content/13.jpg" alt="Корзина">
-           <div class="product__box-link">
-            <button class="product__link-go" type="button">
-             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <path
-               d="M8.24218 16.4718C3.69742 16.4718 0 12.7772 0 8.23588C0 3.69459 3.69742 0 8.24218 0C12.7869 0 16.4844 3.69459 16.4844 8.23588C16.4844 12.7772 12.7869 16.4718 8.24218 16.4718ZM8.24218 1.5613C4.55898 1.5613 1.5625 4.5555 1.5625 8.23588C1.5625 11.9163 4.55898 14.9105 8.24218 14.9105C11.9254 14.9105 14.9219 11.9163 14.9219 8.23588C14.9219 4.5555 11.9254 1.5613 8.24218 1.5613ZM19.7712 19.7713C20.0763 19.4665 20.0763 18.9722 19.7712 18.6673L16.2751 15.1739C15.97 14.869 15.4753 14.869 15.1702 15.1739C14.8651 15.4788 14.8651 15.9731 15.1702 16.2779L18.6663 19.7713C18.8188 19.9238 19.0188 20 19.2188 20C19.4187 20 19.6186 19.9238 19.7712 19.7713Z"
-               fill="#63A60E" />
-             </svg>
-            </button>
-           </div>
           </div>
          </a>
          <div class="sale__inner">
           <a class="product__name">
-           Фруктовая корзина, 1 шт
+           <h3 class="product__name-title">
+            Фруктовая корзина, 1 шт
+           </h3>
           </a>
 
           <div class="product__inner">
-           <span class="sale__status--stock">В наличии</span>
-           <span class="sale__status--ends hidden">Заканчивается</span>
-           <span class="sale__status--not hidden">Нет в наличии</span>
+           <span class="sale__status sale__status--stock">В наличии</span>
+           <span class="sale__status sale__status--ends hidden">Заканчивается</span>
+           <span class="sale__status sale__status--not hidden">Нет в наличии</span>
            <div class="product__price">
             <p class="product__old-price product__old-price--decor">
              5990₽
             </p>
             <p class="product__new-price">
-             3990<sub>₽</sub>
+             3990<span class="rouble">₽</span>
             </p>
            </div>
            <div class="star__num">
@@ -1325,7 +1276,7 @@
           <span class="product__new hidden ">Новинка</span>
           <span class="product__sale hidden">-50%</span>
           <span class="product__hit line-1">Хит</span>
-          <button class="product__like-link" type="submit">
+          <button class="product__like-link hidden" type="submit">
            <svg width="32" height="29" viewBox="0 0 32 29" fill="none">
             <path
              d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
@@ -1337,31 +1288,24 @@
          <a href="#" class="product__link">
           <div class="product__box">
            <img class="product__content" src="images/items-content/14.jpg" alt="Ананас">
-           <div class="product__box-link">
-            <button class="product__link-go" type="button">
-             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <path
-               d="M8.24218 16.4718C3.69742 16.4718 0 12.7772 0 8.23588C0 3.69459 3.69742 0 8.24218 0C12.7869 0 16.4844 3.69459 16.4844 8.23588C16.4844 12.7772 12.7869 16.4718 8.24218 16.4718ZM8.24218 1.5613C4.55898 1.5613 1.5625 4.5555 1.5625 8.23588C1.5625 11.9163 4.55898 14.9105 8.24218 14.9105C11.9254 14.9105 14.9219 11.9163 14.9219 8.23588C14.9219 4.5555 11.9254 1.5613 8.24218 1.5613ZM19.7712 19.7713C20.0763 19.4665 20.0763 18.9722 19.7712 18.6673L16.2751 15.1739C15.97 14.869 15.4753 14.869 15.1702 15.1739C14.8651 15.4788 14.8651 15.9731 15.1702 16.2779L18.6663 19.7713C18.8188 19.9238 19.0188 20 19.2188 20C19.4187 20 19.6186 19.9238 19.7712 19.7713Z"
-               fill="#63A60E" />
-             </svg>
-            </button>
-           </div>
           </div>
          </a>
          <div class="sale__inner">
           <a class="product__name">
-           Свинина мякоть, 1 кг
+           <h3 class="product__name-title">
+            Свинина мякоть, 1 кг
+           </h3>
           </a>
           <div class="product__inner">
-           <span class="sale__status--stock">В наличии</span>
-           <span class="sale__status--ends hidden">Заканчивается</span>
-           <span class="sale__status--not hidden">Нет в наличии</span>
+           <span class="sale__status sale__status--stock">В наличии</span>
+           <span class="sale__status sale__status--ends hidden">Заканчивается</span>
+           <span class="sale__status sale__status--not hidden">Нет в наличии</span>
            <div class="product__price">
             <p class="product__old-price product__old-price--decor">
              599₽
             </p>
             <p class="product__new-price">
-             499<sub>₽</sub>
+             499<span class="rouble">₽</span>
             </p>
            </div>
            <div class="star__num">
@@ -1398,6 +1342,7 @@
 
   <section class="partners">
    <div class="container">
+    <h3 class="visually-hidden">h3</h3>
     <ul class="partners__list">
      <li class="partners__logo">
       <img src="images/partners/sprite.png" alt="srpite">
@@ -1427,7 +1372,7 @@
      <h2 class="news__title title">
       Наши новости
      </h2>
-     <a class="news__allnews">
+     <a class="news__allnews" tabindex="0">
       Все новости
      </a>
     </div>
@@ -1443,7 +1388,7 @@
       </div>
       <img class="news__image" src="images/news-content/1.jpg" alt="Новости">
       <a class="news__link" href="#">
-       Событие этого лета: распродажа сезонных фруктов в онлайн-маркете ФрешОК. Торопись, пока всё не разобрали!
+       <p class="news__link-text" tabindex="0">Событие этого лета: распродажа сезонных фруктов в онлайн-маркете ФрешОК. Торопись, пока всё не разобрали!</p>
       </a>
      </li>
 
@@ -1458,7 +1403,9 @@
       </div>
       <img class="news__image" src="images/news-content/2.jpg" alt="Новости">
       <a class="news__link" href="#">
-       Шикарнейший выбор манго в нашем онлайн-маркете
+       <p class="news__link-text" tabindex="0">
+        Шикарнейший выбор манго в нашем онлайн-маркете
+       </p>
       </a>
      </li>
 
@@ -1473,7 +1420,9 @@
       </div>
       <img class="news__image" src="images/news-content/3.jpg" alt="Новости">
       <a class="news__link" href="#">
-       Всё, что вы хотели знать о папайя
+       <p class="news__link-text" tabindex="0">
+        Всё, что вы хотели знать о папайя
+       </p>
       </a>
      </li>
     </ul>
@@ -1541,15 +1490,18 @@
      </li>
     </ul>
     <div class="footer-top__contacts">
-     <p class="footer-top__contacts-text">
-      Горячая линия
-     </p>
-     <a class="footer-top__contacts-phone" href="tel:7907288365">
-      +7 907 288 365
-     </a>
+     <div class="footer-top__contacts-inner">
+      <p class="footer-top__contacts-text">
+       Горячая линия
+      </p>
+      <a class="footer-top__contacts-phone" href="tel:7907288365">
+       +7 907 288 365
+      </a>
+     </div>
      <a class="footer-top__contacts-adress" href="#">
       Санкт-Петербург, ул. Ленина, 1
      </a>
+
      <ul class="footer-top__social">
       <li class="footer-top__social-list">
        <a class="footer-top__social-link" href="#" aria-label="Ютуб">

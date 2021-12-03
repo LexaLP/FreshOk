@@ -105,10 +105,10 @@
   font-size: 14px;
   font-weight: 600;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
-  margin-right: 27px;
-  letter-spacing: 0.03em;
+  margin-right: 28px;
+  // letter-spacing: 0.03em;
   transition: all 0.5s;
   background-color: $white;
 
@@ -122,7 +122,11 @@
  }
 
  &__search {
-  margin-right: 49px;
+  margin-right: 41px;
+  max-width: 582px;
+  width: 100%;
+  display: flex;
+  align-items: center;
  }
 }
 

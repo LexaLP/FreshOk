@@ -15,4 +15,7 @@
  width: 200px;
  height: 60px;
  margin-right: 23px;
+ @include mq('l') {
+  width: 150px;
+ }
 }

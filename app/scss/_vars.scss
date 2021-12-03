@@ -59,5 +59,26 @@ $white:#FFFFFF;
  font-weight: 900;
 }
 
+$breakpoints: ("s": 560px,
+ "m": 768px,
+ "l": 992px,
+ "xl": 1230px);
+
+@mixin mq($width, $type: max) {
+ @if map_has_key($breakpoints, $width) {
+  $width: map_get($breakpoints, $width);
+
+  @if $type==max {
+   $width: $width - 1px;
+  }
+
+  @media only screen and (#{$type}-width: $width) {
+   @content;
+  }
+ }
+}
+
+
+
 
 

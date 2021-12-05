@@ -74,4 +74,12 @@ $(function () {
   }
  });
 
+ $('.header__menu-btn, .tel-menu__btn, .tel-menu a').click(function () {
+  $('.header__menu').toggleClass('header__menu--active');
+ })
+
+  $('.form__img').click(function () {
+   $('.form__tel').toggleClass('form__tel--active');
+  })
+
 })

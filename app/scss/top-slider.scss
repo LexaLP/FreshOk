@@ -5,6 +5,17 @@
    background-repeat: no-repeat;
    background-size: cover;
    min-height: 600px;
+
+   @include mq('l') {
+    background-position: center center;
+    min-height: 320px;
+   }
+
+   @include mq('m') {
+   .container{
+    padding: 0;
+   }
+   }
   }
 
   &__content {
@@ -13,6 +24,12 @@
    padding-top: 24px;
    padding-left: 24px;
    height: 315px;
+
+   @include mq('l') {
+    background-position: center center;
+    height: 209px;
+    padding: 15px;
+   }
   }
 
   &__title {
@@ -22,6 +39,14 @@
    max-width: 885px;
    width: 100%;
    text-transform: uppercase;
+
+   @include mq('l') {
+    font-size: 40px;
+   }
+
+   @include mq('m') {
+    font-size: 20px;
+   }
   }
 
   &__title-span {
@@ -35,15 +60,23 @@
    text-overflow: ellipsis;
    text-transform: uppercase;
    margin-bottom: 8px;
+
+   @include mq('l') {
+    font-size: 40px;
+   }
+
+   @include mq('m') {
+    font-size: 20px;
+   }
   }
 
   &__text {
    font-weight: 400;
    font-size: 16px;
-   margin-bottom: 33px;
    white-space: nowrap;
    overflow: hidden;
    text-overflow: ellipsis;
+   margin-bottom: 33px;
   }
 
   &__container {
@@ -51,13 +84,27 @@
    display: flex;
    flex-direction: column;
    justify-content: center;
+
+   @include mq('m') {
+    height: 320px;
+   }
   }
  }
 
  .content__item {
   height: 345px;
+
+  @include mq('m') {
+   height: 209px;
+  }
  }
 
+ .title-span {
+  margin-bottom: 25px;
+ }
+
+
+ // При адаптиве глючат стрелки и точки. Живут сами по себе, иногда работают корректно ↓
  .slick {
 
   &-prev,
@@ -88,6 +135,7 @@
     box-shadow: 0px 0px 0px 3px rgba(99, 166, 14, 0.5);
     border-radius: 6px;
    }
+
   }
 
   &-prev {
@@ -97,9 +145,54 @@
   &-next {
    right: 55px;
   }
+
+ }
+
+ .slick-arrow {
+
+  @include mq('xxl') {
+   display: none;
+  }
  }
 
  .slick-disabled {
   opacity: 0.5;
   pointer-events: none;
+ }
+
+
+
+ .slick-dots {
+  display: none;
+
+
+  button {
+   border: none;
+   background-color: $white;
+   border: 1px solid $dark-500;
+   width: 10px;
+   height: 10px;
+   border-radius: 50%;
+   font-size: 0;
+   line-height: 0;
+
+  }
+
+  @include mq('xxl') {
+   display: flex;
+   position: absolute;
+   left: 50%;
+   bottom: 10%;
+  }
+ }
+
+ .slick-dots li+li {
+  margin-left: 12px;
+ }
+
+ .slick-dots .slick-active button {
+  background-color: $green-900;
+  width: 10px;
+  height: 10px;
+  border: none;
  }

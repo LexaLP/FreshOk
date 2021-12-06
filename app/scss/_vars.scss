@@ -62,7 +62,9 @@ $white:#FFFFFF;
 $breakpoints: ("s": 560px,
  "m": 768px,
  "l": 992px,
- "xl": 1230px);
+ "xl": 1230px,
+ "xxl": 1550px
+ );
 
 @mixin mq($width, $type: max) {
  @if map_has_key($breakpoints, $width) {

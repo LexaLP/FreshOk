@@ -161,6 +161,9 @@
  &__inner {
   display: flex;
   align-items: center;
+   @include mq('m') {
+    justify-content: space-between;
+   }
  }
 
  &__btn {
@@ -187,6 +190,9 @@
   &:focus {
    box-shadow: 0px 0px 0px 3px $orange-900;
   }
+   @include mq('xl') {
+    margin-right: 10px;
+   }
 
   @include mq('l') {
    width: 70%;
@@ -204,6 +210,9 @@
   width: 100%;
   display: flex;
   align-items: center;
+     @include mq('xl') {
+    margin-right: 15px;
+    }
  }
 }
 

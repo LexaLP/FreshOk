@@ -1,7 +1,7 @@
 .logo {
  transition: all 0.5s;
  display: inline-block;
-	
+
  &:hover {
   opacity: 0.7;
  }
@@ -11,7 +11,9 @@
  }
 
  @include mq('m') {
-  overflow:hidden;
+  overflow: hidden;
+  width: 45px;
+  margin-right: -80px;
  }
 }
 
@@ -19,15 +21,15 @@
  width: 200px;
  height: 60px;
  margin-right: 23px;
- @include mq('l') {
-  width: 150px;
+
+ @include mq('xl') {
+  width: 140px;
+  margin-right: 10px;
  }
 
-  @include mq('m') {
-   margin:-7px -85px -7px 6px;
-  }
+
 }
 
 .logo__img path {
-  fill: green;
+ fill: green;
 }

@@ -34,6 +34,9 @@
 
  &__link:not(:last-child) {
   margin-right: 12px;
+   @include mq('xl') {
+    margin-right: 0;
+   }
  }
 
  &__num {
@@ -65,6 +68,7 @@
 
 .bg-user {
  background-image: url('../images/sprite.svg#user');
+  
   @include mq('m') {
    display: none;
   }

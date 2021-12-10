@@ -28,12 +28,20 @@
    border-radius: 3px;
   }
 
+  @include mq('xl') {
+   background-size: 21px auto;
+  }
+
  }
 
 
 
  &__link:not(:last-child) {
   margin-right: 12px;
+
+  @include mq('xl') {
+   margin-right: 0;
+  }
  }
 
  &__num {
@@ -49,11 +57,17 @@
   color: $red-900;
   font-size: 10px;
   font-weight: 600;
+
+  @include mq('m') {
+   top: 0px;
+   left: -3px;
+  }
  }
 }
 
 .user {
  padding: 9px 12px;
+
 }
 
 
@@ -61,13 +75,24 @@
 .bg-user {
  background-image: url('../images/sprite.svg#user');
 
+ @include mq('m') {
+  display: none;
+ }
 }
 
 .bg-heart {
  background-image: url('../images/sprite.svg#heart');
 
+ @include mq('m') {
+  display: none;
+ }
 }
 
 .bg-cart {
  background-image: url('../images/sprite.svg#cart');
+
+ @include mq('m') {
+  width: 40px;
+  height: 40px;
+ }
 }

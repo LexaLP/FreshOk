@@ -5,6 +5,17 @@
    background-repeat: no-repeat;
    background-size: cover;
    min-height: 600px;
+
+   @include mq('l') {
+    background-position: center center;
+    min-height: 320px;
+   }
+
+   @include mq('m') {
+    .container {
+     padding: 0;
+    }
+   }
   }
 
   &__content {
@@ -13,6 +24,12 @@
    padding-top: 24px;
    padding-left: 24px;
    height: 315px;
+
+   @include mq('m') {
+    background-position: center center;
+    height: 209px;
+    padding: 15px;
+   }
   }
 
   &__title {
@@ -22,6 +39,14 @@
    max-width: 885px;
    width: 100%;
    text-transform: uppercase;
+
+   @include mq('l') {
+    font-size: 40px;
+   }
+
+   @include mq('m') {
+    font-size: 20px;
+   }
   }
 
   &__title-span {
@@ -35,15 +60,30 @@
    text-overflow: ellipsis;
    text-transform: uppercase;
    margin-bottom: 8px;
+
+   @include mq('l') {
+    font-size: 40px;
+   }
+
+   @include mq('m') {
+    font-size: 20px;
+    margin-bottom: 19px;
+    white-space: none;
+   }
   }
 
   &__text {
    font-weight: 400;
    font-size: 16px;
-   margin-bottom: 33px;
    white-space: nowrap;
    overflow: hidden;
    text-overflow: ellipsis;
+   margin-bottom: 33px;
+
+   @include mq('l') {
+    white-space: normal;
+    margin-bottom: 25px;
+   }
   }
 
   &__container {
@@ -51,55 +91,28 @@
    display: flex;
    flex-direction: column;
    justify-content: center;
+
+   @include mq('m') {
+    height: 320px;
+   }
+  }
+
+  &__link {
+   @include mq('m') {
+    font-size: 14px;
+    width: 152px;
+   }
   }
  }
 
  .content__item {
   height: 345px;
- }
 
- .slick {
-
-  &-prev,
-  &-next {
-   transition: all .5s;
-   width: 60px;
-   height: 60px;
-   padding: 14px 20px;
-   border: none;
-   background-color: rgba(255, 255, 255, 0.8);
-   border-radius: 6px;
-   cursor: pointer;
-   position: absolute;
-   top: 50%;
-   transform: translateY(-50%);
-   z-index: 5;
-
-   &:hover {
-    background-color: $green-200;
-   }
-
-   &:disabled {
-    opacity: 0.8;
-   }
-
-   &:focus {
-    background-color: #F2F2F2;
-    box-shadow: 0px 0px 0px 3px rgba(99, 166, 14, 0.5);
-    border-radius: 6px;
-   }
-  }
-
-  &-prev {
-   left: 55px;
-  }
-
-  &-next {
-   right: 55px;
+  @include mq('m') {
+   height: 209px;
   }
  }
 
- .slick-disabled {
-  opacity: 0.5;
-  pointer-events: none;
+ .title-span {
+  margin-bottom: 25px;
  }

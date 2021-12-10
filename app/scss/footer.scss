@@ -5,6 +5,23 @@
  font-weight: 400;
  color: $white;
  letter-spacing: 0;
+
+ .logo__img {
+  @include mq('xl') {
+   width: 200px;
+   margin-right: 10px;
+  }
+ }
+
+ @include mq('l') {
+  text-align: center;
+  padding-top: 24px;
+
+  .container {
+   padding: 0;
+  }
+ }
+
 }
 
 .footer-top {
@@ -13,8 +30,26 @@
  display: flex;
  justify-content: space-between;
 
+ @include mq('l') {
+  flex-direction: column-reverse;
+  align-items: center;
+  padding: 20px 0 24px 0;
+ }
+
+ &__mail {
+  @include mq('l') {
+   text-align: left;
+   margin-left: -10px;
+
+  }
+ }
+
  &__mail-text {
   margin-bottom: 14px;
+
+  @include mq('l') {
+   margin-bottom: 16px;
+  }
  }
 
  &__form {
@@ -54,6 +89,28 @@
   margin-right: -69px;
   column-count: 3;
   column-gap: 74px;
+
+  @include mq('xl') {
+   column-gap: 25px;
+  }
+
+  @include mq('l') {
+   column-count: 3;
+   border-bottom: 1px solid grey;
+   border-top: 1px solid grey;
+   margin-right: 0;
+   text-align: left;
+   width: 100%;
+   padding-left: 60px;
+   padding-top: 24px;
+   padding-bottom: 24px;
+   column-gap: 15px;
+  }
+
+  @include mq('s') {
+   column-count: 2;
+   column-gap: 35px;
+  }
  }
 
  &__item {
@@ -83,11 +140,20 @@
 
  &__contacts {
   margin-right: 6px;
+
+  @include mq('l') {
+   margin-right: 0;
+   padding-bottom: 24px;
+  }
  }
 
  &__contacts-inner {
   display: flex;
-  flex-wrap: column wrap;
+  flex-flow: column wrap;
+
+  @include mq('l') {
+   flex-direction: row;
+  }
  }
 
  &__contacts-text {
@@ -104,6 +170,11 @@
 
  &__social {
   display: flex;
+
+  @include mq('l') {
+   justify-content: center;
+   padding-right: 10px;
+  }
  }
 
  &__social-list:not(:last-child) {
@@ -142,6 +213,17 @@
   justify-content: space-between;
   padding: 25px 0;
   align-items: center;
+
+  @include mq('l') {
+   flex-direction: column-reverse;
+
+  }
+ }
+
+ &__cards {
+  @include mq('l') {
+   margin-bottom: 21px;
+  }
  }
 
  &__cards-item:not(:last-child) {
@@ -150,6 +232,17 @@
 
  &__copy {
   text-transform: uppercase;
+ }
+}
+
+// Свойства ↓ вроде как применяются в инспекторе, но на сайте - нет
+*:focus,
+*:hover,
+*:active {
+ @include mq('l') {
+  box-shadow: none;
+  opacity: 1;
+  color: inherit;
  }
 
 }

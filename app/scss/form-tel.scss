@@ -1,0 +1,69 @@
+.form {
+ &__tel {
+  position: absolute;
+  max-width: 760px;
+  width: 100%;
+  display: flex;
+
+  align-items: center;
+  top: 104px;
+  left: 0;
+  display: none;
+  border: 1px solid $dark-800;
+  background-color: $white;
+  z-index: 999;
+ }
+
+ &__inner-tel {
+  display: inline-flex;
+  background-color: $white;
+  border-radius: 6px;
+  align-items: center;
+  padding: 0 14px;
+  width: 100%;
+ }
+
+ &__search-tel {
+  width: 100%;
+  height: 50px;
+  border: none;
+ }
+
+ &__img-tel {
+  order: -1;
+  margin-right: 20px;
+  padding-top: 5px;
+  transition: all .5s;
+
+ }
+
+ &__search-tel::placeholder {
+  color: $dark-800;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+ }
+
+ &__btn-tel {
+  font-size: 14px;
+  height: 50px;
+  padding: 10px;
+  border-right: 1px solid black;
+  background-color: $dark-800;
+  color: $white;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all .5s;
+  border: none;
+  max-width: 110px;
+  width: 100%;
+ }
+
+
+}
+
+.form__tel.form__tel--active {
+   @include mq('m') {
+    display: flex;
+   }
+}

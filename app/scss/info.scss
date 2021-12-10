@@ -4,9 +4,22 @@
  margin: auto 0;
  letter-spacing: 0;
 
+ @include mq('l') {
+  padding: 31px 15px;
+
+  .container {
+   padding: 0;
+  }
+
+ }
+
  &__items {
   display: flex;
   justify-content: center;
+
+  @include mq('l') {
+   flex-direction: column;
+  }
  }
 
  &__item {
@@ -14,10 +27,19 @@
   position: relative;
   max-width: 264px;
   width: 100%;
+
+  @include mq('l') {
+   max-width: none;
+  }
  }
 
  &__item:not(:last-child) {
   margin-right: 65px;
+
+  @include mq('l') {
+   margin-right: 0;
+   margin-bottom: 31px;
+  }
  }
 
 

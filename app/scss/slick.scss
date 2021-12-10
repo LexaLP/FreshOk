@@ -1,0 +1,114 @@
+// При адаптиве глючат стрелки и точки. Живут сами по себе, иногда скрываются корректно ↓ . Откуда-то подгружается display block и перебивает none
+.slick {
+ &-prev,
+ &-next {
+  transition: all .5s;
+  width: 60px;
+  height: 60px;
+  padding: 14px 20px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 6px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+
+  &:hover {
+   background-color: $green-200;
+  }
+
+  &:disabled {
+   opacity: 0.8;
+  }
+
+  &:focus {
+   background-color: #F2F2F2;
+   box-shadow: 0px 0px 0px 3px rgba(99, 166, 14, 0.5);
+   border-radius: 6px;
+  }
+
+ }
+
+ &-prev {
+  left: 55px;
+
+  @include mq('xxl') {
+   display: none;
+  }
+ }
+
+ &-next {
+  right: 55px;
+
+  @include mq('xxl') {
+   display: none;
+  }
+ }
+
+ @include mq('xxl') {
+  display: none;
+ }
+
+}
+
+.slick-next .slick-arrow {
+ button {
+
+
+  @include mq('xxl') {
+   display: none;
+  }
+ }
+}
+
+.slick-prev .slick-arrow {
+ button {
+  @include mq('xxl') {
+   display: none;
+  }
+ }
+}
+
+.slick-disabled {
+ opacity: 0.5;
+ pointer-events: none;
+
+ @include mq('xxl') {
+  display: none;
+ }
+}
+
+.slick-dots {
+ display: none;
+
+ button {
+  border: none;
+  background-color: $white;
+  border: 1px solid $dark-500;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  font-size: 0;
+  line-height: 0;
+ }
+
+ @include mq('xxl') {
+  display: flex;
+  position: absolute;
+  left: 42%;
+  bottom: 5%;
+ }
+}
+
+.slick-dots li+li {
+ margin-left: 12px;
+}
+
+.slick-dots .slick-active button {
+ background-color: $green-900;
+ width: 12px;
+ height: 12px;
+ border: none;
+}

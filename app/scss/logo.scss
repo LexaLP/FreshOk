@@ -10,10 +10,22 @@
   box-shadow: 0px 0px 0px 4px $green-200;
  }
 
- @include mq('m') {
-  overflow: hidden;
-  width: 45px;
-  margin-right: -80px;
+
+
+ &__resp {
+  @include mq('m') {
+   overflow: hidden;
+   width: 45px;
+   margin-right: -80px;
+  }
+
+
+
+  &__bottom {
+   @include mq('l') {
+    margin-bottom: 0;
+   }
+  }
  }
 }
 
@@ -25,8 +37,10 @@
  @include mq('xl') {
   width: 140px;
   margin-right: 10px;
+  height: 63px;
  }
 }
+
 
 .logo__img path {
  fill: green;

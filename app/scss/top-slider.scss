@@ -12,9 +12,9 @@
    }
 
    @include mq('m') {
-   .container{
-    padding: 0;
-   }
+    .container {
+     padding: 0;
+    }
    }
   }
 
@@ -25,7 +25,7 @@
    padding-left: 24px;
    height: 315px;
 
-   @include mq('l') {
+   @include mq('m') {
     background-position: center center;
     height: 209px;
     padding: 15px;
@@ -67,6 +67,8 @@
 
    @include mq('m') {
     font-size: 20px;
+    margin-bottom: 19px;
+    white-space: none;
    }
   }
 
@@ -77,6 +79,11 @@
    overflow: hidden;
    text-overflow: ellipsis;
    margin-bottom: 33px;
+
+   @include mq('l') {
+    white-space: normal;
+    margin-bottom: 25px;
+   }
   }
 
   &__container {
@@ -87,6 +94,13 @@
 
    @include mq('m') {
     height: 320px;
+   }
+  }
+
+  &__link {
+   @include mq('m') {
+    font-size: 14px;
+    width: 152px;
    }
   }
  }
@@ -101,98 +115,4 @@
 
  .title-span {
   margin-bottom: 25px;
- }
-
-
- // При адаптиве глючат стрелки и точки. Живут сами по себе, иногда работают корректно ↓
- .slick {
-
-  &-prev,
-  &-next {
-   transition: all .5s;
-   width: 60px;
-   height: 60px;
-   padding: 14px 20px;
-   border: none;
-   background-color: rgba(255, 255, 255, 0.8);
-   border-radius: 6px;
-   cursor: pointer;
-   position: absolute;
-   top: 50%;
-   transform: translateY(-50%);
-   z-index: 5;
-
-   &:hover {
-    background-color: $green-200;
-   }
-
-   &:disabled {
-    opacity: 0.8;
-   }
-
-   &:focus {
-    background-color: #F2F2F2;
-    box-shadow: 0px 0px 0px 3px rgba(99, 166, 14, 0.5);
-    border-radius: 6px;
-   }
-
-  }
-
-  &-prev {
-   left: 55px;
-  }
-
-  &-next {
-   right: 55px;
-  }
-
- }
-
- .slick-arrow {
-
-  @include mq('xxl') {
-   display: none;
-  }
- }
-
- .slick-disabled {
-  opacity: 0.5;
-  pointer-events: none;
- }
-
-
-
- .slick-dots {
-  display: none;
-
-
-  button {
-   border: none;
-   background-color: $white;
-   border: 1px solid $dark-500;
-   width: 10px;
-   height: 10px;
-   border-radius: 50%;
-   font-size: 0;
-   line-height: 0;
-
-  }
-
-  @include mq('xxl') {
-   display: flex;
-   position: absolute;
-   left: 50%;
-   bottom: 10%;
-  }
- }
-
- .slick-dots li+li {
-  margin-left: 12px;
- }
-
- .slick-dots .slick-active button {
-  background-color: $green-900;
-  width: 10px;
-  height: 10px;
-  border: none;
  }

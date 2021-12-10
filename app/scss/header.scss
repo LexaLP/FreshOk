@@ -1,5 +1,10 @@
 .header {
  background-color: $dark-800;
+  @include mq('m') {
+   .container{
+    padding: 0;
+   }
+  }
 
 
  &__top {
@@ -115,6 +120,8 @@
 
   @include mq('m') {
    display: flex;
+   top:-1px;
+   left: 22px;
   }
 
  }
@@ -154,7 +161,7 @@
   background-color: $green-900;
   padding: 25px 0;
    @include mq('m') {
-    padding: 5px;
+    padding: 0 15px;
    }
  }
 

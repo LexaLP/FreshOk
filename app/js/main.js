@@ -9,6 +9,38 @@ $(function () {
   dots: true
  });
 
+ $('.partners__list').slick({
+  arrows: false,
+
+  fade: false,
+  autoplay: true,
+  slidesToShow: 6,
+  slidesToScroll: 1,
+
+
+  responsive: [{
+    breakpoint: 9999,
+    settings: "unslick"
+   },
+   {
+    breakpoint: 768,
+    settings: {
+
+     slidesToShow: 4,
+
+    }
+   },
+   {
+    breakpoint: 560,
+    settings: {
+
+     slidesToShow: 2,
+     slidesToScroll: 2
+    }
+   }
+  ]
+ });
+
 
 
  const cropElement = document.querySelectorAll('.product__name-title'), // выбор элементов  
@@ -63,7 +95,7 @@ $(function () {
 
 $(function () {
  const cropElement = document.querySelectorAll('.news__link-text'), // выбор элементов  
-  size = 105 // кол-во символов  
+  size = 113 // кол-во символов  
  endCharacter = '...'; // окончание  
 
  cropElement.forEach(el => {
@@ -79,8 +111,19 @@ $(function () {
   $('.header__menu').toggleClass('header__menu--active');
  })
 
-  $('.form__img').click(function () {
-   $('.form__tel').toggleClass('form__tel--active');
-  })
+ $('.form__img').click(function () {
+  $('.form__tel').toggleClass('form__tel--active');
+ })
 
+})
+
+
+// Нашел функцию для мышки, но не работает:( вдруг натолкнет на мысль
+$(function removeHover() {
+ var anchors = document.getElementsByTagName('a');
+ for (i = 0; i < anchors.length; i++) {
+  anchors[i].addEventListener('touchstart', function (e) {
+   $('a').mouseleave();
+  }, false);
+ }
 })

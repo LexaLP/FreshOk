@@ -115,6 +115,12 @@ $(function () {
   $('.form__tel').toggleClass('form__tel--active');
  })
 
+ $('.filter-price__input').ionRangeSlider({
+   type: "double",
+   skin: "round",
+    prefix: "₽"
+ });
+
 })
 
 
@@ -127,3 +133,4 @@ $(function removeHover() {
   }, false);
  }
 })
+

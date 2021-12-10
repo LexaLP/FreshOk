@@ -1,0 +1,71 @@
+.shop{
+ padding: 48px 0 72px;
+ &__inner{
+  display: flex;
+ }
+ &__filters{
+  width: 300px;
+  margin-right: 33px;
+ }
+}
+
+.filter{
+ &__item{
+  
+  border: 1px solid $silver-600;
+  border-radius: 6px;
+ }
+ &__top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 24px 18px 18px;
+  border-bottom: 1px solid $silver-600;
+ }
+
+ &__title{
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.2;
+  color: $dark-900;
+ }
+ &__btn{
+  border: none;
+  background-color: transparent;
+  background-image: url('../images/sprite.svg#filter-arrow');
+  background-repeat: no-repeat;
+  background-size: 11px auto;
+  width: 18px;
+  height: 11px;
+ }
+
+ &__content{
+  padding: 18px;
+ }
+ 
+}
+
+
+.irs--round .irs-line{
+ height: 2px;
+ background-color: #c4c4c4;
+}
+
+.irs--round .irs-bar{
+ height: 2px;
+ background-color: $green-900;
+}
+
+.irs--round .irs-handle{
+ width: 18px;
+ height: 18px;
+ background-color: $green-900;
+ border: none;
+ &:hover{
+  background-color: $green-900;
+ }
+}
+
+.irs--round .irs-from, .irs-to{
+ display: none;
+}

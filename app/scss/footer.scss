@@ -235,14 +235,3 @@
  }
 }
 
-// Свойства ↓ вроде как применяются в инспекторе, но на сайте - нет
-*:focus,
-*:hover,
-*:active {
- @include mq('l') {
-  box-shadow: none;
-  opacity: 1;
-  color: inherit;
- }
-
-}

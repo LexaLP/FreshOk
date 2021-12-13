@@ -1,21 +1,27 @@
-.shop{
+.shop {
  padding: 48px 0 72px;
- &__inner{
-  display: flex;
+ &__title{
+  margin-bottom: 48px;
  }
- &__filters{
-  width: 300px;
+ &__inner {
+  display: flex;
+
+ }
+
+ &__filters {
   margin-right: 33px;
  }
 }
 
-.filter{
- &__item{
-  
+.filter {
+ &__item {
+
   border: 1px solid $silver-600;
   border-radius: 6px;
+  margin-bottom: 30px;
  }
- &__top{
+
+ &__top {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -23,13 +29,14 @@
   border-bottom: 1px solid $silver-600;
  }
 
- &__title{
+ &__title {
   font-weight: 400;
   font-size: 24px;
   line-height: 1.2;
   color: $dark-900;
  }
- &__btn{
+
+ &__btn {
   border: none;
   background-color: transparent;
   background-image: url('../images/sprite.svg#filter-arrow');
@@ -39,33 +46,245 @@
   height: 11px;
  }
 
- &__content{
+ &__content {
   padding: 18px;
+  width: 300px;
  }
- 
 }
 
+.filter-price {
+ &__label {
+  display: flex;
+  justify-content: space-between;
+ }
 
-.irs--round .irs-line{
+ &__from,
+ &__to {
+  width: 80px;
+  height: 40px;
+  border: 1px solid $silver-600;
+  border-radius: 3px;
+  padding: 12px 20px;
+  text-align: center;
+  color: $dark-500;
+  font-size: 16px;
+  line-height: 1;
+ }
+
+ &__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  color: $silver-600;
+ }
+}
+
+.irs--round .irs-line {
  height: 2px;
  background-color: #c4c4c4;
 }
 
-.irs--round .irs-bar{
+.irs--round .irs-bar {
  height: 2px;
  background-color: $green-900;
 }
 
-.irs--round .irs-handle{
+.irs--round .irs-handle {
  width: 18px;
  height: 18px;
  background-color: $green-900;
  border: none;
- &:hover{
+
+ &:hover {
   background-color: $green-900;
  }
 }
 
-.irs--round .irs-from, .irs-to{
+.irs--round .irs-from,
+.irs-to {
+ display: none;
+
+
+}
+
+.irs--round .irs-min,
+.irs--round .irs-max {
  display: none;
 }
+
+.filter-offer {
+ &__form {
+  display: flex;
+  flex-direction: column;
+ }
+
+ &__label {
+  padding-left: 36px;
+  margin-bottom: 14px;
+ }
+
+ &__input {
+  @extend %check;
+
+  &:checked+.filter-offer__checkbox {
+   background-image: url('../images/check.svg');
+   background-repeat: no-repeat;
+   background-position: center;
+   border: 1px solid $dark-900;
+
+   &+.filter-offer__text {
+    color: $dark-900;
+   }
+  }
+ }
+
+ &__checkbox {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  border: 1px solid $silver-600;
+  background-color: $silver-100;
+  margin-left: -36px;
+  border-radius: 3px;
+  transition: border 0.5s;
+
+  &:hover {
+   border: 1px solid $dark-900;
+  }
+ }
+
+ &__text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.2;
+  color: $dark-500;
+ }
+}
+
+.filter-category .filter__content {
+ padding-right: 2px;
+}
+
+.filter-category {
+ &__form {
+  display: flex;
+  flex-direction: column;
+  height: 258px;
+  overflow-y: scroll;
+
+
+ }
+
+ &__label {
+  margin-bottom: 12px;
+  cursor: pointer;
+
+  &:last-child {
+   margin-bottom: 0;
+  }
+ }
+
+ &__input {
+  @extend %check;
+
+  &:checked+.filter-category__text {
+   color: $green-900;
+  }
+
+ }
+
+ &__text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.2;
+  color: $dark-500;
+
+  &:hover {
+   opacity: 0.5;
+  }
+ }
+
+
+}
+
+.filter__content>.filter-category__form::-webkit-scrollbar {
+ -webkit-appearance: none;
+ width: 4px;
+
+}
+
+.filter__content>.filter-category__form::-webkit-scrollbar-thumb {
+ border-radius: 3px;
+ background-color: #C4C4C4;
+}
+
+.shop-content {
+ .top-items__content{
+  grid-template-columns:repeat(3, 1fr) ;
+ }
+
+ &__filter {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-bottom: 48px;
+ }
+
+ &__list {
+  margin-right: 15px;
+
+  &:last-child {
+   margin-right: 0;
+  }
+ }
+
+ &__filter-btn {
+  height: 0;
+  border: none;
+
+  &.shop-content__filter-btn--active {
+   path {
+    fill: $green-900;
+   }
+  }
+ }
+
+ &__foot{
+  display: flex;
+  justify-content: space-between;
+ }
+}
+
+.jq-selectbox__select {
+ height: 47px;
+ border: 1px solid #C1C1C1;
+ background: $white;
+ box-shadow: none;
+ text-shadow: none;
+ padding-top: 7px;
+ &:hover {
+  background: transparent;
+ }
+}
+
+.jq-selectbox__trigger {
+ border-left: none;
+}
+
+.jq-selectbox__trigger-arrow {
+ position: absolute;
+ top: 20px;
+ right: 12px;
+ width: 11px;
+ height: 6px;
+ background-image: url('../images/select.svg');
+ border: none;
+}
+
+.jq-selectbox__select-text{
+ font-size: 14px;
+
+ font-weight: 400;
+ color: $dark-500;
+}
+

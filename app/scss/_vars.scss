@@ -7,7 +7,7 @@ $dark-500:#505050;
 $red-900:#cf3e3b;
 $orange-900:#ff7a00;
 $yellow-900:#ffb800;
-$silver-600:#c1c1c1;
+$silver-600:#8a8383;
 $silver-100:#f6f6f6;
 $white:#FFFFFF;
 
@@ -57,6 +57,14 @@ $white:#FFFFFF;
  font-family: 'Ruda',
   sans-serif;
  font-weight: 900;
+}
+
+%check{
+ width: 1px;
+ height: 1px;
+ overflow: hidden;
+ clip: rect(0 0 0 0);
+ position: absolute;
 }
 
 $breakpoints: ("s": 560px,

@@ -115,10 +115,21 @@ $(function () {
   $('.form__tel').toggleClass('form__tel--active');
  })
 
+$('.select-styler').styler();
+
+
  $('.filter-price__input').ionRangeSlider({
-   type: "double",
-   skin: "round",
-    prefix: "₽"
+  type: "double",
+  skin: "round",
+  onStart: function (data) {
+    $('input[name=sum]').val(data.from);
+    $('input[name=sum-to]').val(data.to);
+   },
+
+   onChange: function (data) {
+    $('input[name=sum]').val(data.from);
+    $('input[name=sum-to]').val(data.to);
+   },
  });
 
 })
@@ -133,4 +144,3 @@ $(function removeHover() {
   }, false);
  }
 })
-

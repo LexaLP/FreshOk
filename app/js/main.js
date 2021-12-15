@@ -11,7 +11,6 @@ $(function () {
 
  $('.partners__list').slick({
   arrows: false,
-
   fade: false,
   autoplay: true,
   slidesToShow: 6,
@@ -115,6 +114,11 @@ $(function () {
   $('.form__tel').toggleClass('form__tel--active');
  })
 
+ // $('.filter__btn').click(function () {
+ //  $('.filter-category').toggleClass('filter-category--active');
+ // })
+
+ $('.select-styler').styler();
 })
 
 
@@ -126,4 +130,108 @@ $(function removeHover() {
    $('a').mouseleave();
   }, false);
  }
+})
+
+
+$(function () {
+ const cropElement = document.querySelectorAll('.shop-content__wrapper .product__name-title'), // выбор элементов  
+  size = 62 // кол-во символов  
+ endCharacter = '...'; // окончание  
+
+ cropElement.forEach(el => {
+  let text = el.innerHTML;
+
+  if (el.innerHTML.length > size) {
+   text = text.substr(0, size);
+   el.innerHTML = text + endCharacter;
+  }
+ });
+})
+
+
+$(function () {
+
+ $('.shop-content__filter-btn').on('click', function () {
+  $('.shop-content__filter-btn').removeClass('shop-content__filter-btn--active');
+  $(this).addClass('shop-content__filter-btn--active')
+ });
+
+ $('.button-list').on('click', function () {
+  $('.top-items__content').addClass('shop-content__wrapper')
+ });
+
+ $('.button-grid').on('click', function () {
+  $('.top-items__content').removeClass('shop-content__wrapper')
+ });
+
+
+
+})
+
+
+var $range = $(".filter-price__input"),
+ $inputFrom = $(".filter-price__from"),
+ $inputTo = $(".filter-price__to"),
+ instance,
+ min = 0,
+ max = 1000,
+ from = 0,
+ to = 0;
+
+$range.ionRangeSlider({
+ skin: "round",
+ type: "double",
+ min: min,
+ max: max,
+ onStart: updateInputs,
+ onChange: updateInputs
+});
+instance = $range.data("ionRangeSlider");
+
+function updateInputs(data) {
+ from = data.from;
+ to = data.to;
+
+ $inputFrom.prop("value", from);
+ $inputTo.prop("value", to);
+}
+
+$inputFrom.on("input", function () {
+ var val = $(this).prop("value");
+
+ // validate
+ if (val < min) {
+  val = min;
+ } else if (val > to) {
+  val = to;
+ }
+
+ instance.update({
+  from: val
+ });
+});
+
+$inputTo.on("input", function () {
+ var val = $(this).prop("value");
+
+ // validate
+ if (val < from) {
+  val = from;
+ } else if (val > max) {
+  val = max;
+ }
+
+ instance.update({
+  to: val
+ });
+});
+
+$(function () {
+ $(".filter-category, .filter-offer, .filter-brand, .filter-price").each(function () {
+  let more = $(this).find(".filter__btn");
+  let hide = $(this).find(".filter__content");
+  more.click(function () {
+   hide.slideToggle(20);
+  });
+ });
 })

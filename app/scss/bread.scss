@@ -1,0 +1,38 @@
+.bread {
+ padding: 24px 0;
+ background-color: $silver-100;
+
+ &__list {
+  display: flex;
+ }
+
+ &__item {
+  padding-right: 10px;
+  margin-right: 6px;
+  position: relative;
+
+  &::after {
+   content: '';
+   position: absolute;
+   background-image: url('../images/bread.svg');
+   width: 6px;
+   height: 10px;
+   top: 6px;
+   right: 0px;
+  }
+
+  &:last-child {
+   &::after{
+    display: none;
+   }
+  }
+
+ }
+
+ &__link {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.2;
+
+ }
+}

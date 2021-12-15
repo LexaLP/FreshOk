@@ -1,8 +1,13 @@
 .shop {
  padding: 48px 0 72px;
- &__title{
+
+ &__title {
   margin-bottom: 48px;
+  text-transform: none;
+  font-weight: 700;
+  font-size: 42px;
  }
+
  &__inner {
   display: flex;
 
@@ -25,8 +30,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 24px 18px 18px;
-  border-bottom: 1px solid $silver-600;
+  padding: 10px 24px 10px 18px;
+  width: 300px;
+  
  }
 
  &__title {
@@ -42,13 +48,17 @@
   background-image: url('../images/sprite.svg#filter-arrow');
   background-repeat: no-repeat;
   background-size: 11px auto;
-  width: 18px;
-  height: 11px;
+  background-position: right center;
+  width: 40px;
+  height: 40px;
+  transition: all 0.5s;
  }
 
  &__content {
   padding: 18px;
   width: 300px;
+  border-top: 1px solid $silver-600;
+
  }
 }
 
@@ -219,8 +229,8 @@
 }
 
 .shop-content {
- .top-items__content{
-  grid-template-columns:repeat(3, 1fr) ;
+ .top-items__content {
+  grid-template-columns: repeat(3, 1fr);
  }
 
  &__filter {
@@ -249,10 +259,18 @@
   }
  }
 
- &__foot{
+ &__foot {
   display: flex;
   justify-content: space-between;
  }
+
+ .product__star-num{
+  bottom: 122px;
+ }
+
+  .product__status {
+   bottom: 125px;
+  }
 }
 
 .jq-selectbox__select {
@@ -262,6 +280,7 @@
  box-shadow: none;
  text-shadow: none;
  padding-top: 7px;
+
  &:hover {
   background: transparent;
  }
@@ -281,10 +300,98 @@
  border: none;
 }
 
-.jq-selectbox__select-text{
+.jq-selectbox__select-text {
  font-size: 14px;
 
  font-weight: 400;
  color: $dark-500;
 }
 
+.shop-content__wrapper.top-items__content {
+ grid-template-columns: repeat(2, 466px);
+}
+
+.shop-content__wrapper {
+ .product {
+  display: flex;
+  max-width: 466px;
+  height: 162px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+
+  &__box {
+   width: 200px;
+   height: 150px;
+   margin-bottom: 0;
+
+   img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+   }
+  }
+
+  &__link {
+   width: 200px;
+  }
+
+  &__inner {
+   padding-right: 16px;
+   padding-left: 0;
+   padding-bottom: 10px;
+
+  }
+
+  &__like {
+   order: 1;
+   z-index: 2;
+   padding-bottom: 0;
+  }
+
+  &__status {
+   left: 47%;
+   top: 14px;
+  }
+
+  &__name {
+   padding: 0;
+   width: 178px;
+   margin-bottom: 7px;
+   margin-right: 45px;
+  }
+
+  &__name-title {
+   padding: 0;
+  }
+
+  &__like-link {
+   top: 36%;
+   right: 12px;
+  }
+
+  &__star-num {
+   top: 9px;
+   right: 10px;
+  }
+ }
+}
+
+
+.line-1 {
+ top: 5px;
+ left: 7px;
+}
+
+.line-2 {
+ top: 27px;
+ left: 8px;
+}
+
+.filter-category.filter-category--active .filter__content{
+ display: none;
+}
+
+.show {
+ display: block;
+}

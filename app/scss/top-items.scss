@@ -54,7 +54,7 @@
 
  &__content {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(170px, 300px));
   grid-gap: 30px;
   margin-bottom: 44px;
   text-align: left;
@@ -64,12 +64,12 @@
   }
 
   @include mq('xl') {
-   grid-template-columns: repeat(3, 0fr);
+   grid-template-columns: repeat(3, minmax(170px, 300px));
    justify-content: center;
   }
 
   @include mq('l') {
-   grid-template-columns: repeat(2, 0fr);
+   grid-template-columns: repeat(2, minmax(170px, 300px));
    margin-bottom: 20px;
   }
 

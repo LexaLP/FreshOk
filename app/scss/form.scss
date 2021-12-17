@@ -28,6 +28,9 @@
   margin-right: 20px;
   padding-top: 5px;
   transition: all .5s;
+    @include mq('xl') {
+     margin-right: 5px;
+    }
    @include mq('m') {
     path{
      fill: $white;
@@ -53,7 +56,9 @@
   font-weight: 400;
   font-size: 14px;
   letter-spacing: 0.03em;
-
+     @include mq('xl') {
+      letter-spacing: normal;
+     }
  }
 
  &__btn {
@@ -82,7 +87,11 @@
 
   &:active {
    opacity: 0.5;
+   
   }
+    @include mq('xl') {
+     max-width: 100px;
+    }
    @include mq('m') {
     display: none;
    }

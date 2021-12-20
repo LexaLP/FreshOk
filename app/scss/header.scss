@@ -75,7 +75,6 @@
 
  &__info-item:not(:last-child) {
   margin-right: 42px;
-
   @include mq('m') {
    margin-right: 31px;
   }

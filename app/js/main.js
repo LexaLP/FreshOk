@@ -15,8 +15,6 @@ $(function () {
   autoplay: true,
   slidesToShow: 6,
   slidesToScroll: 1,
-
-
   responsive: [{
     breakpoint: 9999,
     settings: "unslick"
@@ -114,9 +112,14 @@ $(function () {
   $('.form__tel').toggleClass('form__tel--active');
  })
 
- // $('.filter__btn').click(function () {
- //  $('.filter-category').toggleClass('filter-category--active');
- // })
+ $('.shop-content__tel-btn').click(function () {
+  $('.shop__filters').toggleClass('shop__filters--active');
+ })
+
+ $('.shop__filter-close').click(function () {
+  $('.shop__filters').removeClass('shop__filters--active');
+ })
+
 
  $('.select-styler').styler();
 })
@@ -235,3 +238,5 @@ $(function () {
   });
  });
 })
+
+

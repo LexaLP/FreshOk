@@ -11,20 +11,53 @@
  &__inner {
   display: flex;
 
+  @include mq('l') {
+   justify-content: center;
+  }
  }
 
  &__filters {
   margin-right: 33px;
+  background-color: $white;
+  transition: all 0.5s;
 
   @include mq('xxl') {
    margin-right: 15px;
   }
+
+  @include mq('l') {
+   transform: translateX(-300%);
+   z-index: 50;
+  } }
+
+ &__filter-close {
+  background-image: url('../images/sprite.svg#close');
+  width: 18px;
+  height: 18px;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 10px;
+  top: -40px;
+  display: none;
+  transition: all 0.3s;
+
+  @include mq('m') {
+   display: block;
+  }
  }
+}
+
+.shop__filters.shop__filters--active {
+ transform: translateX(0);
+ 
+ left: 0;
+ z-index: 50;
+ transition: all 0.3s;
 }
 
 .filter {
  &__item {
-
   border: 1px solid $silver-600;
   border-radius: 6px;
   margin-bottom: 30px;
@@ -239,6 +272,11 @@
    grid-template-columns: repeat(2, minmax(170px, 300px));
    justify-items: center;
   }
+
+  @include mq('l') {
+   justify-items: normal;
+   grid-gap: 5px;
+  }
  }
 
  &__filter {
@@ -248,7 +286,21 @@
   margin-bottom: 48px;
  }
 
- &__btn{
+ &__tel-btn {
+  background-image: url('../images/sprite.svg#open-filter');
+  width: 47px;
+  height: 47px;
+  border: none;
+  display: none;
+  border-radius: 3px;
+  margin-right: 10px;
+
+  @include mq('l') {
+   display: flex;
+  }
+ }
+
+ &__btn {
   margin-bottom: 24px;
  }
 

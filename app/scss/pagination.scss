@@ -11,7 +11,11 @@
 
  &__item {
   margin-right: 6px;
-
+  @include mq('m') {
+   &:nth-child(2n) {
+    display: none;
+   }
+  }
  }
 
  &__link {
@@ -34,10 +38,18 @@
   margin-right: 6px;
   padding: 13px 15px;
   text-align: center;
+
+  &:last-child {
+   margin-right: 0;
+  }
  }
 }
 
-.pagination__link.pagination__link--active{
- 
+.pagination__link.pagination__link--active {
  border: 1px solid $dark-500;
+
+}
+
+.disabled{
+ background-color: black;
 }

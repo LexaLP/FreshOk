@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {
+    "@fancyapps/ui": "^4.0.12",
     "browser-sync": "^2.27.7",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
@@ -28,4 +29,3 @@
   "license": "ISC",
   "description": ""
 }
-

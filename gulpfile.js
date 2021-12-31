@@ -70,8 +70,8 @@ function images() {
 
 function scripts() {
  return src([
-   'node_modules/@fancyapps/ui/src/Fancybox/Fancybox.js',
    'node_modules/jquery/dist/jquery.js',
+   'node_modules/@fancyapps/ui/dist/jquery.fancybox.js',
    'node_modules/mixitup/dist/mixitup.min.js',
    'node_modules/rateyo/src/jquery.rateyo.js',
    'node_modules/ion-rangeslider/js/ion.rangeSlider.js',

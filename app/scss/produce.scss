@@ -251,7 +251,7 @@
  }
 
  &__top-item {
-    @extend %ruda-600;
+  @extend %ruda-600;
  }
 
  &__top-item--active {
@@ -289,26 +289,190 @@
 
  &__content-text {
   margin-bottom: 20px;
+
   &:last-child {
    margin-bottom: 0;
   }
-  
+
  }
- &__content-descr{
+
+ &__content-descr {
   margin-bottom: 10px;
+
   span {
    font-weight: 700;
   }
  }
 
- &__comments-title{
+ &__content-title {
   margin-bottom: 48px;
   @extend %ruda-600;
   font-size: 18px;
   line-height: 1.2;
  }
- 
+
+
+
+ &__comments {
+  &:not(:last-child) {
+   padding-bottom: 24px;
+   border-bottom: 1px solid #c1c1c1;
+   margin-bottom: 24px;
+  }
+ }
+
+ &__comments-box {
+  margin-bottom: 72px;
+ }
+
+ &__comments-user {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+ }
+
+ &__comments-stars {
+  margin-left: auto;
+ }
+
+ &__comments-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-right: 24px;
+ }
+
+ &__comments-name {
+  font-weight: bold;
+  font-size: 14px;
+  color: $dark-900;
+ }
+
+ &__comments-date {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.7;
+  color: $dark-500;
+ }
+
+ &__comments-text {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.6;
+  color: $dark-500;
+ }
 }
+
+.comments-form {
+ max-width: 690px;
+
+ &__title {
+  text-transform: uppercase;
+  @extend %ruda-600;
+  font-size: 18px;
+  line-height: 1.2;
+  color: $dark-900;
+  margin-bottom: 48px;
+ }
+
+ &__rating {
+  margin-bottom: 15px;
+ }
+
+ &__box {
+  display: flex;
+
+ }
+
+ &__inner {
+  &:nth-child(1) {
+   margin-bottom: 24px;
+  }
+
+  label {
+   display: flex;
+   font-size: 16px;
+   line-height: 1.3;
+   color: $dark-900;
+   margin-bottom: 12px;
+
+  }
+
+  textarea {
+   width: 400px;
+   height: 165px;
+   resize: none;
+   padding: 18px;
+   border: 1px solid #c1c1c1;
+   border-radius: 3px;
+   margin-right: 30px;
+  }
+
+  input {
+   padding: 18px;
+   width: 260px;
+   height: 54px;
+   border: 1px solid #c1c1c1;
+   border-radius: 3px;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 1.3;
+   color: #c1c1c1;
+  }
+ }
+
+ &__label {}
+
+ &__input {
+  @extend %check;
+
+  &:checked+.comments-form__checkbox {
+   background-image: url('../images/check.svg');
+   background-repeat: no-repeat;
+   background-position: center;
+   border: 1px solid $dark-900;
+  }
+ }
+
+ &__checkbox {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  border: 1px solid $silver-600;
+  background-color: $silver-100;
+  border-radius: 3px;
+  transition: border 0.5s;
+
+
+  &:hover {
+   border: 1px solid $dark-900;
+  }
+ }
+
+ &__text {
+  margin-left: 36px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.3;
+  margin-bottom: 24px;
+  color:$dark-500;
+ }
+
+ &__btn {
+  font-size: 18px;
+  line-height: 1.3;
+  width: 194px;
+  padding: 10px 20px;
+  border: none;
+ }
+}
+
+
+
 
 
 .jq-number__field {

@@ -40,6 +40,7 @@ $(function () {
   asNavFor: '.produce-slide__big',
   slidesToShow: 1,
   slidesToScroll: 1,
+  infinite: false,
   arrows: true,
   prevArrow: '<button type="button" class="slick-prev"><img src="../images/slider_bg/arrow-left.svg" alt="left"></button>',
   nextArrow: '<button type="button" class="slick-next"><img src="../images/slider_bg/arrow-right.svg" alt="right"></button>'
@@ -269,34 +270,34 @@ $(function () {
 })
 
 
-var selector = '.slick-slide:not(.slick-cloned)';
+// var selector = '.slick-slide:not(.slick-cloned)';
 
-// Init fancybox, skip cloned elements 
-$().fancybox({
- selector: selector,
- backFocus: false,
- animationEffect: "fade"
-});
+// // Init fancybox, skip cloned elements 
+// $().fancybox({
+//  selector: selector,
+//  backFocus: false,
+//  animationEffect: "fade"
+// });
 
-// Custom click event on cloned elements,  
-$(document).on('click', '.slick-cloned', function (e) {
- $(selector)
-  .eq(($(this).attr("data-slick-index") || 0) % $(selector).length)
-  .trigger("click.fb-start", {
-   $trigger: $(this)
-  });
+// // Custom click event on cloned elements,  
+// $(document).on('click', '.slick-cloned', function (e) {
+//  $(selector)
+//   .eq(($(this).attr("data-slick-index") || 0) % $(selector).length)
+//   .trigger("click.fb-start", {
+//    $trigger: $(this)
+//   });
 
- return false;
-});
+//  return false;
+// });
 
-$('.slick-cloned').removeAttr('data-fancybox');
-$().fancybox({
- selector: selector
-});
+// $('.slick-cloned').removeAttr('data-fancybox');
+// $().fancybox({
+//  selector: selector
+// });
 
 
-$('[data-fancybox="gallery"]').fancybox({
- loop: true,
- autoFocus: false,
- dots: true
-});
+// $('[data-fancybox="gallery"]').fancybox({
+//  loop: true,
+//  autoFocus: false,
+//  dots: true
+// });

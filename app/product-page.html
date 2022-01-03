@@ -331,7 +331,7 @@
         </li>
        </ul>
 
-       <!-- <ul class="produce-slide__big">
+       <ul class="produce-slide__big">
         <li class="produce-slide__big-item">
          <img src="images/produce/1.jpg" alt="питахайя">
         </li>
@@ -341,7 +341,7 @@
         <li class="produce-slide__big-item">
          <img src="images/produce/1.jpg" alt="питахайя">
         </li>
-       </ul> -->
+       </ul>
       </div>
       <div class="produce-item__content">
        <h2 class="produce-item__title title">
@@ -462,24 +462,81 @@
       </p>
       </div>
       <div class="produce-tabs__content-item produce-tabs__content-item--active" id="tab-3">
+       <h4 class="produce-tabs__content-title">
+        МНЕНИЯ НАШИХ КЛИЕНТОВ
+       </h4>
+       <div class="produce-tabs__comments-box">
        <div class="produce-tabs__comments">
-        <h4 class="produce-tabs__comments-title">
-         МНЕНИЯ НАШИХ КЛИЕНТОВ
-        </h4>
         <div class="produce-tabs__comments-user">
          <img class="produce-tabs__comments-icon" src="images/avatar/1.jpg" alt="ava">
          <div class="produce-tabs__comments-name">
           Андрей
-          </div>
           <p class="produce-tabs__comments-date">
            10.06.2021
           </p>
+          </div>
           <div class="stars produce-tabs__comments-stars" data-rateyo-rating="4"></div>
         </div>
          <p class="produce-tabs__comments-text">
           Яркий цвет, нежный вкус. Очень свежий и приятный, буду пробовать еще!))
          </p>
        </div>
+        <div class="produce-tabs__comments">
+         <div class="produce-tabs__comments-user">
+          <img class="produce-tabs__comments-icon" src="images/avatar/1.jpg" alt="ava">
+          <div class="produce-tabs__comments-name">
+           Екатерина Белая
+           <p class="produce-tabs__comments-date">
+            7.06.2021
+           </p>
+          </div>
+          <div class="stars produce-tabs__comments-stars" data-rateyo-rating="5"></div>
+         </div>
+         <p class="produce-tabs__comments-text">
+          Цвет, конечно, очень насыщенный! Ожидаешь, что и вкус будет такой же яркий (просто взрыв), но нет. Вкус
+          "сдержанно-сладкий" и очень-очень свежий! Рад, что есть такая возможность - пробовать экзотические фрукты.
+         </p>
+        </div>
+        </div>
+        <form class="comments-form" action="#">
+         <h4 class="comments-form__title">
+          Оставить отзыв 
+         </h4>
+         <div class="comments-form__rating">
+          <span>Ваша оценка*</span>
+         </div>
+
+         <div class="comments-form__box">
+          <div class="comments-form__inner">
+           <label for="input">
+            Ваш отзыв*
+           </label>
+           <textarea required id="input" placeholder="Введите текст отзыва" name="text"></textarea>
+          </div>
+          <div class="comments-form__wrapper">
+         <div class="comments-form__inner">
+          <label for="name">
+          Имя
+          </label>
+          <input type="text" required id="name" name="lastname" placeholder="Введите ваше имя">
+         </div>
+          <div class="comments-form__inner">
+           <label for="mail">
+            Email*
+           </label>
+           <input type="email" required id="mail" name="email" placeholder="youremail@mail.com">
+          </div>
+          </div>
+         </div>
+        <label class="comments-form__label">
+         <input class="comments-form__input" type="checkbox">
+         <span class="comments-form__checkbox"></span>
+         <p class="comments-form__text">Сохранить моё имя, email и адрес сайта в этом браузере для последующих моих комментариев.</p>
+        </label>
+        <button class="comments-form__btn btn">
+         Оставить отзыв
+        </button>
+        </form>
       </div>
      </div>
     </div>

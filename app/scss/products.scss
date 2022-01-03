@@ -63,6 +63,10 @@
 
  &__like {
   padding-bottom: 57px;
+
+  @include mq('m') {
+  padding-bottom: 52px;
+  }
  }
 
  &__like-link {
@@ -110,6 +114,7 @@
   position: relative;
   overflow: hidden;
   margin-bottom: 12px;
+  order: 52;
 
   @include mq('m') {
    height: 126px;
@@ -292,6 +297,7 @@
   font-size: 10px;
   line-height: 1;
   text-transform: uppercase;
+  order: 1px;
  }
 }
 

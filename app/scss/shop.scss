@@ -1,11 +1,20 @@
 .shop {
  padding: 48px 0 72px;
 
+ @include mq('l') {
+  padding: 30px 0 36px;
+ }
+
  &__title {
   margin-bottom: 48px;
   text-transform: none;
   font-weight: 700;
   font-size: 42px;
+
+  @include mq('l') {
+   font-size: 30px;
+   margin-bottom: 26px;
+  }
  }
 
  &__inner {
@@ -139,6 +148,7 @@
 .irs--round .irs-handle {
  width: 18px;
  height: 18px;
+ top: 28px;
  background-color: $green-900;
  border: none;
 
@@ -284,6 +294,11 @@
   justify-content: end;
   align-items: center;
   margin-bottom: 48px;
+
+  @include mq('l') {
+   margin-bottom: 30px;
+   justify-content: start;
+  }
  }
 
  &__tel-btn {
@@ -336,9 +351,11 @@
 
  .product__star-num {
   bottom: 122px;
+  order: 1;
 
   @include mq('m') {
-   bottom: 152px;
+   bottom: 157px;
+   right: 0;
   }
 
   @include mq('s') {
@@ -348,9 +365,11 @@
 
  .product__status {
   bottom: 125px;
+  order: 1;
 
   @include mq('m') {
-   bottom: 155px;
+   bottom: 160px;
+   left: 14px;
   }
 
   @include mq('s') {
@@ -360,8 +379,13 @@
 
  .star {
   svg {
-   width: 12px;
-   height: 12px;
+   width: 16px;
+   height: 16px;
+
+   @include mq('s') {
+    width: 12px;
+    height: 12px;
+   }
   }
  }
 }
@@ -373,6 +397,9 @@
  box-shadow: none;
  text-shadow: none;
  padding-top: 7px;
+  @include mq('l') {
+   padding: 5px 30px 0 6px;
+  }
 
  &:hover {
   background: transparent;
@@ -395,7 +422,9 @@
 
 .jq-selectbox__select-text {
  font-size: 14px;
-
+ @include mq('l') {
+  font-size: 12px;
+ }
  font-weight: 400;
  color: $dark-500;
 }
@@ -450,6 +479,7 @@
   &__status {
    left: 47%;
    top: 14px;
+   order: 1;
   }
 
   &__name {

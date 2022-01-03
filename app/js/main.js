@@ -15,8 +15,6 @@ $(function () {
   autoplay: true,
   slidesToShow: 6,
   slidesToScroll: 1,
-
-
   responsive: [{
     breakpoint: 9999,
     settings: "unslick"
@@ -24,9 +22,7 @@ $(function () {
    {
     breakpoint: 768,
     settings: {
-
      slidesToShow: 4,
-
     }
    },
    {
@@ -40,7 +36,20 @@ $(function () {
   ]
  });
 
-
+ $('.produce-slide__small').slick({
+  asNavFor: '.produce-slide__big',
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  infinite: false,
+  arrows: true,
+  prevArrow: '<button type="button" class="slick-prev"><img src="../images/slider_bg/arrow-left.svg" alt="left"></button>',
+  nextArrow: '<button type="button" class="slick-next"><img src="../images/slider_bg/arrow-right.svg" alt="right"></button>'
+ })
+ $('.produce-slide__big').slick({
+  asNavFor: '.produce-slide__small',
+  slidesToShow: 1,
+  slidesToScroll: 1
+ })
 
  const cropElement = document.querySelectorAll('.product__name-title'), // выбор элементов  
   size = 92 // кол-во символов  
@@ -60,6 +69,11 @@ $(function () {
   starWidth: "16px",
   readOnly: true
  });
+
+  $(".stars").rateYo({
+   numStars: 5,
+   starWidth: "16px"
+  });
 
  var top = document.querySelector('[data-ref="mix1"]');
  var sale = document.querySelector('[data-ref="mix2"]');
@@ -114,24 +128,47 @@ $(function () {
   $('.form__tel').toggleClass('form__tel--active');
  })
 
- // $('.filter__btn').click(function () {
- //  $('.filter-category').toggleClass('filter-category--active');
- // })
+ $('.shop-content__tel-btn').click(function () {
+  $('.shop__filters').toggleClass('shop__filters--active');
+ })
 
- $('.select-styler').styler();
+ $('.shop__filter-close').click(function () {
+  $('.shop__filters').removeClass('shop__filters--active');
+ })
+
+ $('.pagination__link').on('click', function () {
+  $('.pagination__prev').addClass('pagination__prev--active');
+ });
+
+ $('.dis').on('click', function () {
+  $('.pagination__prev').removeClass('pagination__prev--active');
+ });
+
+ $('.pagination__link').on('click', function () {
+  $('.pagination__next').removeClass('pagination__next--active');
+  $('.act').on('click', function () {
+   $('.pagination__next').addClass('pagination__next--active');
+  });
+ });
+
+ $('.pagination__link').on('click', function () {
+  $('.pagination__link').removeClass('pagination__link--active');
+  $(this).addClass('pagination__link--active')
+ });
+
+
+  $('.produce-tabs__top-item').on('click', function (e) {
+   e.preventDefault();
+   $('.produce-tabs__top-item').removeClass('produce-tabs__top-item--active');
+    $(this).addClass('produce-tabs__top-item--active')
+
+    $('.produce-tabs__content-item').removeClass('produce-tabs__content-item--active');
+    $($(this).attr('href')).addClass('produce-tabs__content-item--active');
+  });
+
+
+ $('.select-styler, .produce__item-num').styler();
 })
-
-
-// Нашел функцию для мышки, но не работает:( вдруг натолкнет на мысль
-$(function removeHover() {
- var anchors = document.getElementsByTagName('a');
- for (i = 0; i < anchors.length; i++) {
-  anchors[i].addEventListener('touchstart', function (e) {
-   $('a').mouseleave();
-  }, false);
- }
-})
-
 
 $(function () {
  const cropElement = document.querySelectorAll('.shop-content__wrapper .product__name-title'), // выбор элементов  
@@ -150,7 +187,6 @@ $(function () {
 
 
 $(function () {
-
  $('.shop-content__filter-btn').on('click', function () {
   $('.shop-content__filter-btn').removeClass('shop-content__filter-btn--active');
   $(this).addClass('shop-content__filter-btn--active')
@@ -163,9 +199,6 @@ $(function () {
  $('.button-grid').on('click', function () {
   $('.top-items__content').removeClass('shop-content__wrapper')
  });
-
-
-
 })
 
 
@@ -235,3 +268,36 @@ $(function () {
   });
  });
 })
+
+
+// var selector = '.slick-slide:not(.slick-cloned)';
+
+// // Init fancybox, skip cloned elements 
+// $().fancybox({
+//  selector: selector,
+//  backFocus: false,
+//  animationEffect: "fade"
+// });
+
+// // Custom click event on cloned elements,  
+// $(document).on('click', '.slick-cloned', function (e) {
+//  $(selector)
+//   .eq(($(this).attr("data-slick-index") || 0) % $(selector).length)
+//   .trigger("click.fb-start", {
+//    $trigger: $(this)
+//   });
+
+//  return false;
+// });
+
+// $('.slick-cloned').removeAttr('data-fancybox');
+// $().fancybox({
+//  selector: selector
+// });
+
+
+// $('[data-fancybox="gallery"]').fancybox({
+//  loop: true,
+//  autoFocus: false,
+//  dots: true
+// });

@@ -36,20 +36,53 @@ $(function () {
   ]
  });
 
+ $('.produce-slider__item').slick({
+  arrows: true,
+  prevArrow: '<button type="button" class="slick-prev"><img src="../images/slider_bg/arrow-left.svg" alt="left"></button>',
+  nextArrow: '<button type="button" class="slick-next"><img src="../images/slider_bg/arrow-right.svg" alt="right"></button>',
+  infinite: true,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  dots: false,
+   responsive: [
+   {
+    breakpoint: 1250,
+    settings: {
+     slidesToShow: 3,
+    }
+   },
+   {
+    breakpoint: 992,
+    settings: {
+     arrows: false,
+     dots:true,
+     slidesToShow: 2,
+     slidesToScroll: 2
+    }
+   }
+  ]
+ });
+
+
+
  $('.produce-slide__small').slick({
-  asNavFor: '.produce-slide__big',
+
   slidesToShow: 1,
   slidesToScroll: 1,
   infinite: false,
   arrows: true,
   prevArrow: '<button type="button" class="slick-prev"><img src="../images/slider_bg/arrow-left.svg" alt="left"></button>',
-  nextArrow: '<button type="button" class="slick-next"><img src="../images/slider_bg/arrow-right.svg" alt="right"></button>'
+  nextArrow: '<button type="button" class="slick-next"><img src="../images/slider_bg/arrow-right.svg" alt="right"></button>',
+  responsive:[
+   {
+     breakpoint: 768,
+     settings:{
+     arrows:false,
+     }
+   }
+  ]
  })
- $('.produce-slide__big').slick({
-  asNavFor: '.produce-slide__small',
-  slidesToShow: 1,
-  slidesToScroll: 1
- })
+
 
  const cropElement = document.querySelectorAll('.product__name-title'), // выбор элементов  
   size = 92 // кол-во символов  
@@ -270,34 +303,3 @@ $(function () {
 })
 
 
-// var selector = '.slick-slide:not(.slick-cloned)';
-
-// // Init fancybox, skip cloned elements 
-// $().fancybox({
-//  selector: selector,
-//  backFocus: false,
-//  animationEffect: "fade"
-// });
-
-// // Custom click event on cloned elements,  
-// $(document).on('click', '.slick-cloned', function (e) {
-//  $(selector)
-//   .eq(($(this).attr("data-slick-index") || 0) % $(selector).length)
-//   .trigger("click.fb-start", {
-//    $trigger: $(this)
-//   });
-
-//  return false;
-// });
-
-// $('.slick-cloned').removeAttr('data-fancybox');
-// $().fancybox({
-//  selector: selector
-// });
-
-
-// $('[data-fancybox="gallery"]').fancybox({
-//  loop: true,
-//  autoFocus: false,
-//  dots: true
-// });

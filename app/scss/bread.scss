@@ -4,6 +4,9 @@
 
  &__list {
   display: flex;
+   @include mq('s') {
+    flex-wrap: wrap
+   }
  }
 
  &__item {
